@@ -746,7 +746,7 @@
   --terms-accent: var(--color-accent);
   --terms-bg: var(--color-accent-bg);
   position: relative;
-  background: linear-gradient(180deg, var(--terms-bg) 0%, var(--color-surface) 74%);
+  background: var(--color-surface);
   border: 1px solid var(--color-border-light);
   border-top: 3px solid var(--terms-accent);
   border-radius: var(--radius-lg);
@@ -1479,17 +1479,16 @@ mark, .search-result-title mark, .search-result-snippet mark {
 .resource-card-footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-wrap: wrap;
   gap: 0.5em;
-  padding-top: 0.75em;
-  border-top: 1px solid var(--color-border-light);
+  padding-top: 0.5em;
+  border-top: 0;
   margin-top: auto;
 }
 
 .resource-verified {
-  font-size: var(--font-size-xs);
-  color: var(--color-muted);
+  display: none;
 }
 
 .resource-card-actions {
@@ -2091,9 +2090,7 @@ mark, .search-result-title mark, .search-result-snippet mark {
 .home-terms-entry {
   max-width: 860px;
   padding: 1.15em 1.25em;
-  background:
-    linear-gradient(90deg, rgba(253, 246, 242, 0.96), rgba(255, 255, 255, 0.98)),
-    var(--color-surface);
+  background: var(--color-surface);
   border-left-color: var(--color-accent);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
@@ -2104,6 +2101,10 @@ mark, .search-result-title mark, .search-result-snippet mark {
   font-size: 22px;
   font-weight: 900;
   line-height: 1.2;
+}
+
+.home-terms-entry p {
+  display: none;
 }
 
 .home-terms-kicker,
@@ -2166,30 +2167,16 @@ mark, .search-result-title mark, .search-result-snippet mark {
 
 .resource-group-title,
 .home-section-title {
-  display: flex;
-  align-items: center;
-  gap: 0.65em;
-  font-family: var(--font-serif);
-  font-size: 26px;
-  font-weight: 900;
-  border-bottom: 0;
-  padding-bottom: 0;
+  display: none;
 }
 
 .resource-group-title::before,
 .home-section-title::before {
-  content: "";
-  width: 42px;
-  height: 3px;
-  background: var(--color-accent);
-  border-radius: 999px;
-  flex: 0 0 auto;
+  content: none;
 }
 
 .resource-group-desc {
-  margin-left: 54px;
-  font-family: var(--font-accent);
-  font-size: 16px;
+  display: none;
 }
 
 .resource-grid {
@@ -2217,13 +2204,7 @@ mark, .search-result-title mark, .search-result-snippet mark {
 
 .resource-card::before,
 .home-video-card::before {
-  content: "";
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 4px;
-  background: var(--color-accent);
-  opacity: 0.88;
-  z-index: 1;
+  content: none;
 }
 
 .resource-card:nth-child(2n)::before,
@@ -2241,7 +2222,7 @@ mark, .search-result-title mark, .search-result-snippet mark {
 .search-result-card:hover,
 .category-doc-card:hover {
   box-shadow: var(--shadow-lg);
-  transform: translateY(-2px);
+  transform: none;
 }
 
 .resource-card-body,
