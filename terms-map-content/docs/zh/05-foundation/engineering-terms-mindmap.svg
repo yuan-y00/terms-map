@@ -1,96 +1,95 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="780" viewBox="0 0 1280 780" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-labelledby="title desc">
   <title id="title">现代工程术语地图</title>
-  <desc id="desc">从工程术语连接到电机电源、电路信号、GPU计算、嵌入式机器人、半导体制造和基础学科。</desc>
+  <desc id="desc">用彩色分区展示工程术语牵到的知识方向。</desc>
   <defs>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#30261d" flood-opacity="0.16"/>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#2f261f" flood-opacity="0.13"/>
     </filter>
+    <linearGradient id="topBand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#C4513B"/>
+      <stop offset="0.28" stop-color="#4A6FA5"/>
+      <stop offset="0.54" stop-color="#5B8C6F"/>
+      <stop offset="0.78" stop-color="#8A6F3D"/>
+      <stop offset="1" stop-color="#B75D7D"/>
+    </linearGradient>
     <style>
       .bg { fill: #f7f2ea; }
-      .line { fill: none; stroke-width: 4; stroke-linecap: round; opacity: 0.72; }
-      .center { fill: #1f2933; filter: url(#shadow); }
-      .center-title { font: 900 38px "Noto Sans SC", "Microsoft YaHei", sans-serif; fill: #fff; }
-      .center-sub { font: 500 18px "Noto Sans SC", "Microsoft YaHei", sans-serif; fill: #d7dee8; }
-      .card { fill: #fffdf8; stroke-width: 2; filter: url(#shadow); }
-      .h { font: 900 23px "Noto Sans SC", "Microsoft YaHei", sans-serif; fill: #1d232b; }
-      .p { font: 500 16px "Noto Sans SC", "Microsoft YaHei", sans-serif; fill: #505a65; }
-      .tag { font: 800 15px "Noto Sans SC", "Microsoft YaHei", sans-serif; fill: #fff; }
-      .chip-text { font: 700 14px "JetBrains Mono", "Consolas", monospace; fill: #26313d; }
-      .small { font: 500 14px "Noto Sans SC", "Microsoft YaHei", sans-serif; fill: #56616d; }
-      .math { fill: #fdf1eb; stroke: #c4513b; }
-      .physics { fill: #eef7f1; stroke: #5b8c6f; }
-      .electronics { fill: #eef4fb; stroke: #4a6fa5; }
-      .programming { fill: #f7f1e4; stroke: #8a6f3d; }
-      .signals { fill: #fbeef4; stroke: #b75d7d; }
+      .panel { fill: #fffdf8; stroke: #e6dacb; stroke-width: 2; filter: url(#softShadow); }
+      .title { font: 900 34px "Noto Sans SC", "Microsoft YaHei", sans-serif; fill: #1f2933; }
+      .sub { font: 500 17px "Noto Sans SC", "Microsoft YaHei", sans-serif; fill: #68717c; }
+      .card { stroke-width: 2; filter: url(#softShadow); }
+      .h { font: 900 24px "Noto Sans SC", "Microsoft YaHei", sans-serif; fill: #1d242c; }
+      .p { font: 600 16px "JetBrains Mono", "Consolas", monospace; fill: #26313d; }
+      .s { font: 500 15px "Noto Sans SC", "Microsoft YaHei", sans-serif; fill: #58636f; }
+      .label { font: 900 15px "Noto Sans SC", "Microsoft YaHei", sans-serif; fill: #fff; }
+      .baseH { font: 900 18px "Noto Sans SC", "Microsoft YaHei", sans-serif; fill: #1f2933; }
+      .baseP { font: 500 14px "Noto Sans SC", "Microsoft YaHei", sans-serif; fill: #65707b; }
     </style>
   </defs>
 
-  <rect class="bg" width="1280" height="780"/>
+  <rect class="bg" width="1280" height="760"/>
+  <rect x="46" y="42" width="1188" height="676" rx="24" class="panel"/>
+  <rect x="46" y="42" width="1188" height="8" rx="4" fill="url(#topBand)"/>
 
-  <path class="line" d="M640 354 C520 286 426 238 302 186" stroke="#c4513b"/>
-  <path class="line" d="M640 354 C760 286 854 238 978 186" stroke="#4a6fa5"/>
-  <path class="line" d="M640 390 C506 408 402 424 278 456" stroke="#5b8c6f"/>
-  <path class="line" d="M640 390 C774 408 878 424 1002 456" stroke="#8a6f3d"/>
-  <path class="line" d="M640 438 C640 520 640 578 640 640" stroke="#b75d7d"/>
+  <text x="86" y="102" class="title">现代工程术语地图</text>
+  <text x="86" y="134" class="sub">看到一个词，先看它大概落在哪个工程方向，再顺手补相关知识。</text>
 
   <g>
-    <rect x="488" y="298" width="304" height="164" rx="28" class="center"/>
-    <text x="640" y="360" text-anchor="middle" class="center-title">工程术语</text>
-    <text x="640" y="394" text-anchor="middle" class="center-sub">遇到一个词</text>
-    <text x="640" y="424" text-anchor="middle" class="center-sub">顺着它找到背后的知识</text>
+    <rect x="86" y="178" width="346" height="188" rx="20" fill="#fff0ea" stroke="#c4513b" class="card"/>
+    <rect x="112" y="204" width="120" height="34" rx="17" fill="#c4513b"/>
+    <text x="172" y="227" text-anchor="middle" class="label">电机 / 电源</text>
+    <text x="112" y="270" class="h">电怎么转换和驱动</text>
+    <text x="112" y="306" class="p">BLDC · FOC · ESC · PWM</text>
+    <text x="112" y="334" class="p">Inverter · MOSFET · IGBT</text>
+    <text x="112" y="356" class="s">电压电流、电磁、转动、反馈控制</text>
   </g>
 
   <g>
-    <rect x="70" y="74" width="410" height="218" rx="22" class="card math"/>
-    <rect x="96" y="100" width="138" height="34" rx="17" fill="#c4513b"/>
-    <text x="165" y="123" text-anchor="middle" class="tag">电机 / 电源</text>
-    <text x="96" y="164" class="h">电怎么被转换和驱动</text>
-    <text x="96" y="198" class="p">BLDC · FOC · ESC · PWM · Inverter</text>
-    <text x="96" y="226" class="p">MOSFET · IGBT</text>
-    <text x="96" y="260" class="small">牵到：电压电流、电磁、转动、反馈控制</text>
+    <rect x="466" y="178" width="346" height="188" rx="20" fill="#eef4fb" stroke="#4a6fa5" class="card"/>
+    <rect x="492" y="204" width="116" height="34" rx="17" fill="#4a6fa5"/>
+    <text x="550" y="227" text-anchor="middle" class="label">电路 / 信号</text>
+    <text x="492" y="270" class="h">信号怎么流，接口怎么工作</text>
+    <text x="492" y="306" class="p">PCB · RC · Signal · Noise</text>
+    <text x="492" y="334" class="p">FFT · ADC · Hot Plug · ESD</text>
+    <text x="492" y="356" class="s">电路板、滤波、采样、频率、接口保护</text>
   </g>
 
   <g>
-    <rect x="800" y="74" width="410" height="218" rx="22" class="card electronics"/>
-    <rect x="826" y="100" width="126" height="34" rx="17" fill="#4a6fa5"/>
-    <text x="889" y="123" text-anchor="middle" class="tag">电路 / 信号</text>
-    <text x="826" y="164" class="h">信号怎么流，接口怎么工作</text>
-    <text x="826" y="198" class="p">PCB · Schematic · RC · Signal · Noise</text>
-    <text x="826" y="226" class="p">FFT · ADC · Hot Plug · ESD</text>
-    <text x="826" y="260" class="small">牵到：电路板、滤波、采样、频率、接口保护</text>
+    <rect x="846" y="178" width="346" height="188" rx="20" fill="#eef7f1" stroke="#5b8c6f" class="card"/>
+    <rect x="872" y="204" width="138" height="34" rx="17" fill="#5b8c6f"/>
+    <text x="941" y="227" text-anchor="middle" class="label">GPU / AI 硬件</text>
+    <text x="872" y="270" class="h">芯片为什么能并行计算</text>
+    <text x="872" y="306" class="p">GPU · CUDA · Tensor Core</text>
+    <text x="872" y="334" class="p">VRAM · HBM · PCIe</text>
+    <text x="872" y="356" class="s">矩阵、显存、总线、芯片结构</text>
   </g>
 
   <g>
-    <rect x="70" y="366" width="410" height="218" rx="22" class="card physics"/>
-    <rect x="96" y="392" width="184" height="34" rx="17" fill="#5b8c6f"/>
-    <text x="188" y="415" text-anchor="middle" class="tag">GPU / AI 硬件</text>
-    <text x="96" y="456" class="h">芯片为什么能并行计算</text>
-    <text x="96" y="490" class="p">GPU · CUDA · Tensor Core · VRAM</text>
-    <text x="96" y="518" class="p">HBM · PCIe · Link Training</text>
-    <text x="96" y="552" class="small">牵到：矩阵、显存、总线、芯片结构</text>
+    <rect x="86" y="400" width="536" height="178" rx="20" fill="#f7f1e4" stroke="#8a6f3d" class="card"/>
+    <rect x="112" y="426" width="148" height="34" rx="17" fill="#8a6f3d"/>
+    <text x="186" y="449" text-anchor="middle" class="label">机器人 / 自动化</text>
+    <text x="112" y="492" class="h">代码怎么进入真实世界</text>
+    <text x="112" y="524" class="p">MCU · Firmware · RTOS · Sensor</text>
+    <text x="112" y="552" class="p">Actuator · PLC · Motion Control</text>
+    <text x="112" y="570" class="s">传感器、执行器、实时控制、机器运动</text>
   </g>
 
   <g>
-    <rect x="800" y="366" width="410" height="218" rx="22" class="card programming"/>
-    <rect x="826" y="392" width="196" height="34" rx="17" fill="#8a6f3d"/>
-    <text x="924" y="415" text-anchor="middle" class="tag">机器人 / 自动化</text>
-    <text x="826" y="456" class="h">代码怎么进入真实世界</text>
-    <text x="826" y="490" class="p">MCU · Firmware · RTOS · Sensor</text>
-    <text x="826" y="518" class="p">Actuator · PLC · Motion Control</text>
-    <text x="826" y="552" class="small">牵到：传感器、执行器、实时控制、机器运动</text>
+    <rect x="656" y="400" width="536" height="178" rx="20" fill="#fbeef4" stroke="#b75d7d" class="card"/>
+    <rect x="682" y="426" width="148" height="34" rx="17" fill="#b75d7d"/>
+    <text x="756" y="449" text-anchor="middle" class="label">半导体 / 制造</text>
+    <text x="682" y="492" class="h">芯片和产品怎么被做出来</text>
+    <text x="682" y="524" class="p">Wafer · Lithography · Etching</text>
+    <text x="682" y="552" class="p">Packaging · SMT · Repair</text>
+    <text x="682" y="570" class="s">芯片制造、焊接、测试、故障定位、设备维护</text>
   </g>
 
   <g>
-    <rect x="420" y="604" width="440" height="132" rx="22" class="card signals"/>
-    <rect x="446" y="628" width="184" height="34" rx="17" fill="#b75d7d"/>
-    <text x="538" y="651" text-anchor="middle" class="tag">半导体 / 制造</text>
-    <text x="446" y="694" class="p">Wafer · Lithography · Etching · Packaging · SMT</text>
-    <text x="446" y="720" class="small">牵到：芯片制造、焊接、测试、故障定位、设备维护</text>
-  </g>
-
-  <g>
-    <rect x="510" y="42" width="260" height="86" rx="18" fill="#fffdf8" stroke="#e6d9c9" stroke-width="2"/>
-    <text x="640" y="76" text-anchor="middle" class="h">基础学科</text>
-    <text x="640" y="106" text-anchor="middle" class="small">数学 · 物理 · 电子 · 编程</text>
+    <rect x="86" y="618" width="1106" height="62" rx="18" fill="#ffffff" stroke="#e6dacb" stroke-width="2"/>
+    <text x="116" y="656" class="baseH">基础学科</text>
+    <text x="232" y="656" class="baseP">数学：三角函数、微积分、线性代数、傅里叶、概率</text>
+    <text x="554" y="656" class="baseP">物理：力学、电磁、热、波</text>
+    <text x="760" y="656" class="baseP">电子：RC/RL、晶体管、电源、电路板</text>
+    <text x="1018" y="656" class="baseP">编程：C/C++、Python、调试</text>
   </g>
 </svg>

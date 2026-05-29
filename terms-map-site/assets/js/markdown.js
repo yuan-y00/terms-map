@@ -194,12 +194,6 @@ var MarkdownRenderer = (function () {
 
       var firstLine = block.split("\n")[0].trim();
 
-      /* Trusted rich blocks authored in local docs */
-      if (/^<(section|div)\s+class="term-map/.test(firstLine)) {
-        html += block + "\n";
-        continue;
-      }
-
       /* Heading */
       var hMatch = firstLine.match(/^(#{1,4})\s+(.+)$/);
       if (hMatch && block.indexOf("\n") === -1) {
