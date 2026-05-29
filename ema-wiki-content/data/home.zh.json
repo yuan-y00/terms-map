@@ -1,0 +1,14 @@
+{
+  "hero": {
+    "title": "术语地图",
+    "subtitle": "",
+    "description": ""
+  },
+  "tracks": [
+    { "id": "math", "icon": "M", "label": "数学", "description": "三角函数、微积分、线性代数、傅里叶入口", "link": "#/resources?track=math" },
+    { "id": "physics", "icon": "P", "label": "物理", "description": "力学、能量、转动、振动和工程对象直觉", "link": "#/resources?track=physics" },
+    { "id": "electronics", "icon": "E", "label": "电子", "description": "电压电流、电路、半导体、电源和 PCB", "link": "#/resources?track=electronics" },
+    { "id": "programming", "icon": "C", "label": "编程", "description": "Python、C++、命令行、Git、调试和数据处理", "link": "#/resources?track=programming" },
+    { "id": "signals-control", "icon": "S", "label": "信号与控制", "description": "采样、FFT、滤波、PID、反馈和频响", "link": "#/resources?track=signals-control" }
+  ]
+}

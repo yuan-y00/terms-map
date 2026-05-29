@@ -1,0 +1,29 @@
+{
+  "id": "example-resource",
+  "card_kind": "resource",
+  "title": "Resource title",
+  "source": "Source name",
+  "url": "https://example.com/",
+  "type": "course",
+  "lang": "en",
+  "level": "beginner",
+  "audience_level": "补一个卡住的概念",
+  "track": "math",
+  "category": "math",
+  "scope": "engineering-terms",
+  "foundation_module": "数学",
+  "summary": {
+    "zh": "这条资源能帮用户看懂什么词或问题。",
+    "en": "What term or problem this resource helps with."
+  },
+  "best_for": {
+    "zh": "用户卡在哪里时应该看它。",
+    "en": "When a learner should use it."
+  },
+  "related_terms": ["term-one", "term-two"],
+  "tags": ["terms", "engineering"],
+  "featured": true,
+  "home_featured": false,
+  "priority": 100,
+  "verified_date": "2026-05-29"
+}

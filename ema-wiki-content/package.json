@@ -1,0 +1,11 @@
+{
+  "name": "ema-wiki-content",
+  "version": "1.0.0",
+  "description": "术语地图工程术语与资源索引。",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "build:index": "node scripts/build-index.mjs",
+    "check:index": "node scripts/build-index.mjs --check --strict"
+  }
+}

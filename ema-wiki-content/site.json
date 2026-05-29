@@ -1,0 +1,28 @@
+{
+  "siteName": "术语地图",
+  "tagline": {
+    "zh": "工程术语与资源索引",
+    "en": "Engineering Terms and Resources"
+  },
+  "defaultLang": "zh",
+  "supportedLangs": ["zh", "en"],
+  "contentRepo": "",
+  "siteRepo": "",
+  "rawBase": "../ema-wiki-content",
+  "editBase": "",
+  "categories": [
+    { "id": "overview", "order": 0, "label": { "zh": "术语与案例", "en": "Terms and Cases" } },
+    { "id": "math", "order": 10, "label": { "zh": "数学", "en": "Math" } },
+    { "id": "physics", "order": 20, "label": { "zh": "物理", "en": "Physics" } },
+    { "id": "electronics", "order": 30, "label": { "zh": "电子", "en": "Electronics" } },
+    { "id": "programming", "order": 40, "label": { "zh": "编程", "en": "Programming" } },
+    { "id": "signals-control", "order": 50, "label": { "zh": "信号与控制", "en": "Signals and Control" } }
+  ],
+  "tracks": [
+    { "id": "math", "icon": "M", "label": { "zh": "数学", "en": "Math" }, "description": { "zh": "三角函数、微积分、线性代数、傅里叶入口", "en": "Trigonometry, calculus, linear algebra and Fourier intuition" } },
+    { "id": "physics", "icon": "P", "label": { "zh": "物理", "en": "Physics" }, "description": { "zh": "力学、能量、转动、振动和工程对象直觉", "en": "Mechanics, energy, rotation, vibration and physical intuition" } },
+    { "id": "electronics", "icon": "E", "label": { "zh": "电子", "en": "Electronics" }, "description": { "zh": "电压电流、电路、半导体、电源和 PCB", "en": "Voltage, current, circuits, semiconductors, power and PCBs" } },
+    { "id": "programming", "icon": "C", "label": { "zh": "编程", "en": "Programming" }, "description": { "zh": "Python、C++、命令行、Git、调试和数据处理", "en": "Python, C++, CLI, Git, debugging and data processing" } },
+    { "id": "signals-control", "icon": "S", "label": { "zh": "信号与控制", "en": "Signals and Control" }, "description": { "zh": "采样、FFT、滤波、PID、反馈和频响", "en": "Sampling, FFT, filtering, PID, feedback and frequency response" } }
+  ]
+}

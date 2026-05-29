@@ -1,0 +1,222 @@
+/*
+ * 术语地图 — Layout
+ * ============================================================================
+ * Header + 三栏（Sidebar / Main / TOC）+ Footer
+ * Sidebar: no border-right, no full-height rail. Only subtle scrollbar.
+ */
+
+/* ── Site Shell ── */
+.site {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ==========================================================================
+ * Header
+ * ========================================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+  padding: 0 1.25em;
+  background: var(--color-header-bg);
+  border-bottom: 1px solid var(--color-header-border);
+  box-shadow: var(--color-header-shadow);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  flex-shrink: 0;
+}
+
+.header-logo {
+  width: 32px;
+  height: 32px;
+}
+
+.header-title {
+  font-family: var(--font-serif);
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-text);
+  white-space: nowrap;
+}
+
+.header-center {
+  flex: 1;
+  max-width: 360px;
+  margin: 0 1.5em;
+}
+
+.header-search {
+  width: 100%;
+  padding: 0.45em 0.85em;
+  border: 1px solid var(--color-input-border);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  background: var(--color-input-bg);
+  color: var(--color-text);
+  outline: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.header-search::placeholder {
+  color: var(--color-muted);
+}
+
+.header-search:focus {
+  border-color: var(--color-input-focus);
+  background: var(--color-surface);
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  flex-shrink: 0;
+}
+
+/* ==========================================================================
+ * Body: Main + TOC
+ * ========================================================================== */
+.site-body {
+  display: flex;
+  flex: 1;
+  max-width: 1180px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ── Home page: full-width, no sidebar, no TOC ── */
+.route-home .site-body { max-width: 1180px; }
+.route-home .site-toc { display: none !important; }
+.route-home .site-main { padding: 2em 1.5em; max-width: 1180px; margin: 0 auto; }
+
+/* ── Resources page: full-width, no sidebar, no TOC ── */
+.route-resources .site-body { max-width: 1180px; }
+.route-resources .site-toc { display: none !important; }
+.route-resources .site-main { padding: 2em 1.5em; max-width: 1180px; margin: 0 auto; }
+
+/* ── Search page: full-width, no sidebar, no TOC ── */
+.route-search .site-body { max-width: 1180px; }
+.route-search .site-toc { display: none !important; }
+.route-search .site-main { padding: 2em 1.5em; max-width: 1180px; margin: 0 auto; }
+
+/* ── Doc page: TOC visible ── */
+.route-doc .site-toc { display: block; }
+
+/* ==========================================================================
+ * Main Content
+ * ========================================================================== */
+.site-main {
+  flex: 1;
+  min-width: 0;
+  padding: 2em 2.5em;
+}
+
+/* ==========================================================================
+ * Table of Contents
+ * ========================================================================== */
+.site-toc {
+  width: var(--toc-width);
+  flex-shrink: 0;
+  padding: 2em 1.5em 2em 1em;
+  border-left: 1px solid var(--color-toc-border);
+  position: sticky;
+  top: var(--header-height);
+  height: calc(100vh - var(--header-height));
+  overflow-y: auto;
+
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-scrollbar-thumb) transparent;
+}
+
+.site-toc h4 {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-muted);
+  margin: 0 0 0.75em;
+}
+
+.site-toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.site-toc li {
+  margin-bottom: 0.15em;
+}
+
+.site-toc a {
+  display: block;
+  padding: 0.25em 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-muted);
+  border-left: 2px solid transparent;
+  padding-left: 0.75em;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.site-toc a:hover {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+
+.site-toc a.active {
+  color: var(--color-accent);
+  border-left-color: var(--color-accent);
+}
+
+/* ==========================================================================
+ * Footer
+ * ========================================================================== */
+.site-footer {
+  text-align: center;
+  padding: 1.5em 1em 2.5em;
+  font-size: var(--font-size-sm);
+  color: var(--color-muted);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.site-footer a {
+  color: var(--color-muted);
+}
+
+.site-footer a:hover {
+  color: var(--color-link-hover);
+}
+
+/* ==========================================================================
+ * Responsive: Tablet
+ * ========================================================================== */
+@media (max-width: 1024px) {
+  .site-toc { display: none; }
+}
+
+/* ==========================================================================
+ * Responsive: Mobile
+ * ========================================================================== */
+@media (max-width: 768px) {
+  .site-body { max-width: 100%; }
+  .site-main { padding: 1.5em 1em; }
+
+  .header-center {
+    display: block;
+    flex: 1;
+    max-width: none;
+    margin: 0 0.5em;
+  }
+
+  .header-search { font-size: var(--font-size-xs); }
+}

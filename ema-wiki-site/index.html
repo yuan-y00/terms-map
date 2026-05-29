@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-store">
+  <title>术语地图</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/tokens.css?v=20260529-terms-map">
+  <link rel="stylesheet" href="assets/css/base.css?v=20260529-terms-map">
+  <link rel="stylesheet" href="assets/css/layout.css?v=20260529-terms-map">
+  <link rel="stylesheet" href="assets/css/components.css?v=20260529-terms-map">
+</head>
+<body class="site">
+
+  <!-- ===================================================================== -->
+  <!-- Header -->
+  <!-- ===================================================================== -->
+  <header class="site-header">
+    <div class="header-left">
+      <img class="header-logo" src="assets/img/logo.svg" alt="术语地图 Logo" width="32" height="32">
+      <span class="header-title">术语地图</span>
+    </div>
+
+    <div class="header-center">
+      <form id="site-search-form" class="site-search" role="search" style="margin:0;display:flex;">
+        <input
+          type="search"
+          class="header-search"
+          id="search-input"
+          placeholder="Search docs, tags, keywords..."
+          autocomplete="off"
+        >
+      </form>
+    </div>
+
+    <div class="header-right">
+      <button class="btn-icon language-toggle" id="language-toggle" title="Switch language">EN</button>
+      <button class="btn-icon" id="btn-theme" title="Toggle theme">☽</button>
+      <span
+        class="btn-icon"
+        title="Repository URL not configured"
+      >⌂</span>
+    </div>
+  </header>
+
+  <!-- ===================================================================== -->
+  <!-- Body: Sidebar + Main + TOC -->
+  <!-- ===================================================================== -->
+  <div class="site-body">
+
+    <!-- Main Content -->
+    <main class="site-main" id="main-content">
+      <!-- Rendered by app.js -->
+    </main>
+
+    <!-- Table of Contents -->
+    <aside class="site-toc" id="toc" aria-label="Table of Contents">
+      <h4 data-i18n="toc_title">目录</h4>
+      <p style="font-size:var(--font-size-sm);color:var(--color-muted);">
+        TOC 将在后续轮次实现
+      </p>
+    </aside>
+
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- Footer -->
+  <!-- ===================================================================== -->
+  <footer class="site-footer">
+    <p>
+      <span data-i18n="footer_text">术语地图</span>
+      &nbsp;·&nbsp;
+      v0.10.0 · Visual Rewrite
+    </p>
+  </footer>
+
+  <!-- ===================================================================== -->
+  <!-- Scripts -->
+  <!-- ===================================================================== -->
+  <script src="assets/js/config.js?v=20260529-terms-map"></script>
+  <script src="assets/js/theme.js?v=20260529-terms-map"></script>
+  <script src="assets/js/i18n.js?v=20260529-terms-map"></script>
+  <script src="assets/js/api.js?v=20260529-terms-map"></script>
+  <script src="assets/js/markdown.js?v=20260529-terms-map"></script>
+  <script src="assets/js/resources.js?v=20260529-terms-map"></script>
+  <script src="assets/js/search.js?v=20260529-terms-map"></script>
+  <script src="assets/js/app.js?v=20260529-terms-map"></script>
+
+</body>
+</html>

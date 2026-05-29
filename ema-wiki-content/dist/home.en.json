@@ -1,0 +1,44 @@
+{
+  "hero": {
+    "title": "术语地图",
+    "subtitle": "",
+    "description": ""
+  },
+  "tracks": [
+    {
+      "id": "math",
+      "icon": "M",
+      "label": "Math",
+      "description": "Trigonometry, calculus, linear algebra and Fourier intuition",
+      "link": "#/resources?track=math"
+    },
+    {
+      "id": "physics",
+      "icon": "P",
+      "label": "Physics",
+      "description": "Mechanics, energy, rotation, vibration and physical intuition",
+      "link": "#/resources?track=physics"
+    },
+    {
+      "id": "electronics",
+      "icon": "E",
+      "label": "Electronics",
+      "description": "Voltage, current, circuits, semiconductors, power and PCBs",
+      "link": "#/resources?track=electronics"
+    },
+    {
+      "id": "programming",
+      "icon": "C",
+      "label": "Programming",
+      "description": "Python, C++, CLI, Git, debugging and data processing",
+      "link": "#/resources?track=programming"
+    },
+    {
+      "id": "signals-control",
+      "icon": "S",
+      "label": "Signals and Control",
+      "description": "Sampling, FFT, filtering, PID, feedback and frequency response",
+      "link": "#/resources?track=signals-control"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "generatedAt": "2026-05-29T11:09:47.666Z",
+  "stats": {
+    "total": 2,
+    "byLang": {
+      "zh": 2
+    },
+    "byCategory": {
+      "electronics": 1,
+      "overview": 1
+    }
+  },
+  "docs": [
+    {
+      "id": "zh-gpu-hot-plug",
+      "title": "显卡热插拔：为什么普通电脑里不要这么做",
+      "lang": "zh",
+      "category": "electronics",
+      "tags": [
+        "GPU",
+        "PCIe",
+        "Power",
+        "Debugging"
+      ],
+      "summary": "用显卡热插拔这个例子，理解供电浪涌、PCIe 信号、ESD、系统枚举和驱动状态为什么会一起出问题。",
+      "order": 30,
+      "path": "docs/zh/05-foundation/gpu-hot-plug.md",
+      "route": "#/doc/zh-gpu-hot-plug",
+      "headings": [
+        {
+          "level": 2,
+          "text": "工程对象",
+          "slug": "工程对象"
+        },
+        {
+          "level": 2,
+          "text": "卡在哪里",
+          "slug": "卡在哪里"
+        },
+        {
+          "level": 2,
+          "text": "它牵到哪些知识",
+          "slug": "它牵到哪些知识"
+        },
+        {
+          "level": 2,
+          "text": "最低掌握目标",
+          "slug": "最低掌握目标"
+        },
+        {
+          "level": 2,
+          "text": "关键词",
+          "slug": "关键词"
+        },
+        {
+          "level": 2,
+          "text": "一个简单判断",
+          "slug": "一个简单判断"
+        },
+        {
+          "level": 2,
+          "text": "回到工程对象",
+          "slug": "回到工程对象"
+        }
+      ],
+      "wordCount": 226,
+      "readingTime": 1
+    },
+    {
+      "id": "zh-engineering-terms-map",
+      "title": "工程术语查漏补缺表",
+      "lang": "zh",
+      "category": "overview",
+      "tags": [
+        "Terms",
+        "Engineering",
+        "Foundation"
+      ],
+      "summary": "把工程实践和生活里遇到的英文术语查清楚，再顺着术语补相关知识。",
+      "order": 6,
+      "path": "docs/zh/05-foundation/engineering-terms-map.md",
+      "route": "#/doc/zh-engineering-terms-map",
+      "headings": [
+        {
+          "level": 2,
+          "text": "电机、电源与控制",
+          "slug": "电机、电源与控制"
+        },
+        {
+          "level": 2,
+          "text": "电路与信号",
+          "slug": "电路与信号"
+        },
+        {
+          "level": 2,
+          "text": "GPU、AI 硬件与计算",
+          "slug": "GPU、AI 硬件与计算"
+        },
+        {
+          "level": 2,
+          "text": "嵌入式、机器人与自动化",
+          "slug": "嵌入式、机器人与自动化"
+        },
+        {
+          "level": 2,
+          "text": "半导体、制造与维修",
+          "slug": "半导体、制造与维修"
+        }
+      ],
+      "wordCount": 870,
+      "readingTime": 4
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+name: Validate content
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'docs/**'
+      - 'data/**'
+      - 'site.json'
+      - 'scripts/**'
+      - 'templates/**'
+      - 'CONTENT_STYLE_GUIDE.md'
+      - 'CONTENT_ROADMAP.md'
+      - '.github/workflows/validate-content.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Run content validation
+        run: node scripts/build-index.mjs --check --strict

@@ -1,0 +1,57 @@
+name: Build content index
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/**'
+      - 'data/**'
+      - 'site.json'
+      - 'scripts/build-index.mjs'
+      - '.github/workflows/build-index.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-index:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Run index builder
+        run: node scripts/build-index.mjs
+
+      - name: Verify generated files
+        run: |
+          test -f dist/docs.json
+          test -f dist/search.json
+          test -f dist/site.json
+          test -f dist/home.zh.json
+          test -f dist/home.en.json
+          test -f dist/resources.json
+          test -f dist/papers.json
+          test -f dist/projects.json
+          test -f dist/tutorials.json
+          echo "All dist files verified."
+
+      - name: Commit dist changes if any
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          if git diff --quiet && git diff --staged --quiet; then
+            echo "No changes to commit."
+          else
+            git add dist/
+            git commit -m "chore: rebuild content indexes"
+            git push
+            echo "Dist changes committed and pushed."
+          fi
