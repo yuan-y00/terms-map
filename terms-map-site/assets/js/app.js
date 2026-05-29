@@ -67,6 +67,10 @@ const App = (() => {
     if (m) m.innerHTML = html;
   }
 
+  function safeClassName(s) {
+    return String(s || "").toLowerCase().replace(/[^a-z0-9_-]+/g, "-");
+  }
+
   /* ------------------------------------------------------------------------
    * Render: Loading
    * ------------------------------------------------------------------------ */
@@ -262,7 +266,7 @@ const App = (() => {
         markdown, doc, state.docsManifest
       );
 
-      var h = "";
+      var h = '<article class="doc-page doc-page-' + esc(safeClassName(doc.id)) + '">';
 
       /* Doc header */
       h += '<div class="doc-header">' +
@@ -299,6 +303,7 @@ const App = (() => {
 
       /* Rendered Markdown body */
       h += '<div class="markdown-body">' + result.html + "</div>";
+      h += "</article>";
 
       setMain(h);
 
