@@ -504,12 +504,28 @@
 
 .doc-page-zh-engineering-terms-map .markdown-body h2 {
   font-family: var(--font-serif);
-  font-size: 22px;
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: 900;
   color: var(--color-primary);
-  margin: 2em 0 0.85em;
-  padding-bottom: 0;
-  border-bottom: 0;
+  margin: 2em 0 0.7em;
+  padding-bottom: 0 !important;
+  border-bottom: 0 !important;
+  line-height: 1.15;
+}
+
+.doc-page-zh-engineering-terms-map .markdown-body h2::after {
+  content: none !important;
+  display: none !important;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.doc-header,
+.category-header,
+.search-header {
+  scroll-margin-top: calc(var(--header-height) + 24px);
 }
 
 .doc-page-zh-engineering-terms-map .markdown-body table {
