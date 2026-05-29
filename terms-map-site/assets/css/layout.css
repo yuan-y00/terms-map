@@ -25,6 +25,8 @@
   height: var(--header-height);
   padding: 0 1.25em;
   background: var(--color-header-bg);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--color-header-border);
   box-shadow: var(--color-header-shadow);
 }
@@ -37,14 +39,16 @@
 }
 
 .header-logo {
-  width: 32px;
-  height: 32px;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-md);
+  box-shadow: 0 6px 18px rgba(224, 122, 95, 0.16);
 }
 
 .header-title {
   font-family: var(--font-serif);
-  font-size: var(--font-size-lg);
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 900;
   color: var(--color-text);
   white-space: nowrap;
 }
@@ -57,14 +61,15 @@
 
 .header-search {
   width: 100%;
-  padding: 0.45em 0.85em;
+  padding: 0.58em 0.95em;
   border: 1px solid var(--color-input-border);
   border-radius: var(--radius-md);
   font-size: var(--font-size-sm);
   background: var(--color-input-bg);
   color: var(--color-text);
   outline: none;
-  transition: border-color 0.15s, background 0.15s;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.15s, background 0.15s, box-shadow 0.15s;
 }
 
 .header-search::placeholder {
@@ -74,6 +79,7 @@
 .header-search:focus {
   border-color: var(--color-input-focus);
   background: var(--color-surface);
+  box-shadow: 0 0 0 3px rgba(224, 122, 95, 0.14);
 }
 
 .header-right {
@@ -97,12 +103,12 @@
 /* ── Home page: full-width, no sidebar, no TOC ── */
 .route-home .site-body { max-width: 1180px; }
 .route-home .site-toc { display: none !important; }
-.route-home .site-main { padding: 2em 1.5em; max-width: 1180px; margin: 0 auto; }
+.route-home .site-main { padding: 1.5em 1.5em 2.5em; max-width: 1180px; margin: 0 auto; }
 
 /* ── Resources page: full-width, no sidebar, no TOC ── */
 .route-resources .site-body { max-width: 1180px; }
 .route-resources .site-toc { display: none !important; }
-.route-resources .site-main { padding: 2em 1.5em; max-width: 1180px; margin: 0 auto; }
+.route-resources .site-main { padding: 1.75em 1.5em 2.5em; max-width: 1180px; margin: 0 auto; }
 
 /* ── Search page: full-width, no sidebar, no TOC ── */
 .route-search .site-body { max-width: 1180px; }

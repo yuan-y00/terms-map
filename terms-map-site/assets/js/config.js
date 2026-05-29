@@ -29,7 +29,16 @@ const CONFIG = {
     location.protocol === "file:",
 
   /* Content data root. Local and monorepo Pages deployments use sibling dirs. */
-  contentBaseLocal: "/terms-map-content",
+  get contentBaseLocal() {
+    if (location.protocol === "file:") return "../terms-map-content";
+    var path = location.pathname || "/";
+    var marker = "/terms-map-site";
+    var idx = path.indexOf(marker);
+    if (idx !== -1) {
+      return path.slice(0, idx) + "/terms-map-content";
+    }
+    return "../terms-map-content";
+  },
   contentBaseRemote: "../terms-map-content",
 
   /* Automatically set based on environment */

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-29T13:19:12.080Z",
+  "generatedAt": "2026-05-29T13:40:18.315Z",
   "stats": {
     "total": 2,
     "byLang": {
@@ -77,39 +77,119 @@
         "Engineering",
         "Foundation"
       ],
-      "summary": "把工程实践和生活里遇到的英文术语查清楚，再顺着术语补相关知识。",
+      "summary": "按产业方向、工程技能、学科基础三层结构，把工程实践里遇到的英文术语放回真实问题里理解。",
       "order": 6,
       "path": "docs/zh/05-foundation/engineering-terms-map.md",
       "route": "#/doc/zh-engineering-terms-map",
       "headings": [
         {
           "level": 2,
-          "text": "电机、电源与控制",
-          "slug": "电机、电源与控制"
+          "text": "产业方向",
+          "slug": "产业方向"
+        },
+        {
+          "level": 3,
+          "text": "Automation 术语",
+          "slug": "Automation 术语"
+        },
+        {
+          "level": 3,
+          "text": "Semiconductor Equipment 术语",
+          "slug": "Semiconductor Equipment 术语"
+        },
+        {
+          "level": 3,
+          "text": "Robotics 术语",
+          "slug": "Robotics 术语"
+        },
+        {
+          "level": 3,
+          "text": "Energy 术语",
+          "slug": "Energy 术语"
+        },
+        {
+          "level": 3,
+          "text": "Manufacturing 术语",
+          "slug": "Manufacturing 术语"
         },
         {
           "level": 2,
-          "text": "电路与信号",
-          "slug": "电路与信号"
+          "text": "工程技能",
+          "slug": "工程技能"
+        },
+        {
+          "level": 3,
+          "text": "C++ 术语",
+          "slug": "C++ 术语"
+        },
+        {
+          "level": 3,
+          "text": "Python 术语",
+          "slug": "Python 术语"
+        },
+        {
+          "level": 3,
+          "text": "Linux 术语",
+          "slug": "Linux 术语"
+        },
+        {
+          "level": 3,
+          "text": "Git 术语",
+          "slug": "Git 术语"
+        },
+        {
+          "level": 3,
+          "text": "PLC 术语",
+          "slug": "PLC 术语"
+        },
+        {
+          "level": 3,
+          "text": "Microcontrollers 术语",
+          "slug": "Microcontrollers 术语"
+        },
+        {
+          "level": 3,
+          "text": "Sensors 术语",
+          "slug": "Sensors 术语"
         },
         {
           "level": 2,
-          "text": "GPU、AI 硬件与计算",
-          "slug": "GPU、AI 硬件与计算"
+          "text": "学科基础",
+          "slug": "学科基础"
         },
         {
-          "level": 2,
-          "text": "嵌入式、机器人与自动化",
-          "slug": "嵌入式、机器人与自动化"
+          "level": 3,
+          "text": "Math 术语",
+          "slug": "Math 术语"
         },
         {
-          "level": 2,
-          "text": "半导体、制造与维修",
-          "slug": "半导体、制造与维修"
+          "level": 3,
+          "text": "Physics 术语",
+          "slug": "Physics 术语"
+        },
+        {
+          "level": 3,
+          "text": "Circuits 术语",
+          "slug": "Circuits 术语"
+        },
+        {
+          "level": 3,
+          "text": "Programming 术语",
+          "slug": "Programming 术语"
+        },
+        {
+          "level": 3,
+          "text": "Control 术语",
+          "slug": "Control 术语"
+        },
+        {
+          "level": 3,
+          "text": "Measurement 术语",
+          "slug": "Measurement 术语"
         }
       ],
-      "wordCount": 974,
-      "readingTime": 5
+      "wordCount": 1892,
+      "readingTime": 9
     }
   ]
 }
