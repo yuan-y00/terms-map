@@ -144,7 +144,7 @@ const App = (() => {
         var id = this.getAttribute("data-toc-id");
         var el = document.getElementById(id);
         if (el) {
-          el.scrollIntoView({ behavior: "smooth", block: "start" });
+          scrollToAnchorTarget(el);
         }
       });
     }
@@ -211,6 +211,13 @@ const App = (() => {
         if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
       });
     }
+  }
+
+  function scrollToAnchorTarget(el) {
+    var header = document.querySelector(".site-header");
+    var headerHeight = header ? header.offsetHeight : 0;
+    var y = el.getBoundingClientRect().top + window.pageYOffset - headerHeight - 28;
+    window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
   }
 
   /* ------------------------------------------------------------------------

@@ -266,7 +266,7 @@ var ResourceCards = (function () {
    * Render: media thumbnail / placeholder
    * ========================================================================== */
 
-  function renderMedia(item) {
+  function renderMedia(item, overlayHtml) {
     var url = item.url;
     var hasUrl = safeUrl(url);
     var media = item.media;
@@ -301,7 +301,7 @@ var ResourceCards = (function () {
       }
     }
 
-    return '<div class="resource-media">' + h + '</div>';
+    return '<div class="resource-media">' + h + (overlayHtml || "") + '</div>';
   }
 
   /* ==========================================================================
@@ -316,7 +316,12 @@ var ResourceCards = (function () {
     var h = '<article class="resource-card">';
 
     /* Media / thumbnail */
-    h += renderMedia(item);
+    var mediaAction = "";
+    if (hasUrl) {
+      mediaAction = '<a class="resource-media-action" href="' + attr(item.url) +
+        '" target="_blank" rel="noreferrer noopener">' + esc(t("direct_link")) + '</a>';
+    }
+    h += renderMedia(item, mediaAction);
 
     /* Body */
     h += '<div class="resource-card-body">';
@@ -354,18 +359,11 @@ var ResourceCards = (function () {
     }
 
     /* Footer: verified date + direct link */
-    h += '<div class="resource-card-footer">';
-    if (item.verified_date) {
-      h += '<span class="resource-verified">' + esc(t("verified_date")) + ': ' + esc(item.verified_date) + '</span>';
-    }
-    h += '<div class="resource-card-actions">';
-    if (hasUrl) {
-      h += '<a class="resource-direct-link" href="' + attr(item.url) +
-        '" target="_blank" rel="noreferrer noopener">' + esc(t("direct_link")) + '</a>';
-    } else {
+    if (!hasUrl) {
+      h += '<div class="resource-card-footer">';
       h += '<span class="resource-direct-link disabled">' + esc(t("pending_verify")) + '</span>';
+      h += '</div>';
     }
-    h += '</div></div>';
 
     h += '</div>'; /* /.resource-card-body */
     h += '</article>'; /* /.resource-card */
