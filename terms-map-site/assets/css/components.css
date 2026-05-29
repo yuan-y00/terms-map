@@ -508,8 +508,8 @@
   font-weight: 700;
   color: var(--color-primary);
   margin: 2em 0 0.85em;
-  padding-bottom: 0.35em;
-  border-bottom: 2px solid var(--color-accent-soft);
+  padding-bottom: 0;
+  border-bottom: 0;
 }
 
 .doc-page-zh-engineering-terms-map .markdown-body table {
@@ -2383,13 +2383,7 @@ mark, .search-result-title mark, .search-result-snippet mark {
 }
 
 .markdown-body h2::after {
-  content: "";
-  display: block;
-  width: 52px;
-  height: 3px;
-  margin-top: 0.35em;
-  background: var(--color-accent);
-  border-radius: 999px;
+  content: none;
 }
 
 .markdown-body table,

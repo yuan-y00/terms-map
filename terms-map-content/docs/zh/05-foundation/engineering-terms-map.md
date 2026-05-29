@@ -10,65 +10,6 @@ order: 6
 
 # 工程术语查漏补缺表
 
-<section class="terms-overview" aria-label="工程术语地图总览">
-<div class="terms-overview-grid">
-<article class="terms-overview-card terms-overview-card-accent">
-<div class="terms-overview-meta"><span>01</span><span>产业方向</span></div>
-<h3>Automation</h3>
-<p class="terms-overview-terms">PLC · HMI · SCADA · Servo · Fieldbus</p>
-<p>工厂设备、控制柜、产线节拍、工业通信和现场调试。</p>
-</article>
-<article class="terms-overview-card terms-overview-card-primary">
-<div class="terms-overview-meta"><span>02</span><span>产业方向</span></div>
-<h3>Semiconductor Equipment</h3>
-<p class="terms-overview-terms">Wafer · Lithography · Etching · Vacuum · Yield</p>
-<p>半导体设备、工艺腔体、运动平台、检测、良率和维护。</p>
-</article>
-<article class="terms-overview-card terms-overview-card-positive">
-<div class="terms-overview-meta"><span>03</span><span>产业方向</span></div>
-<h3>Robotics</h3>
-<p class="terms-overview-terms">Robot Arm · SLAM · Sensor Fusion · Actuator</p>
-<p>机械臂、移动机器人、仿真、感知、路径规划和部署。</p>
-</article>
-<article class="terms-overview-card terms-overview-card-neutral">
-<div class="terms-overview-meta"><span>04</span><span>产业方向</span></div>
-<h3>Energy</h3>
-<p class="terms-overview-terms">Battery · BMS · Inverter · Converter · Grid</p>
-<p>电池、电源、储能、光伏、电机驱动和并网系统。</p>
-</article>
-<article class="terms-overview-card terms-overview-card-muted">
-<div class="terms-overview-meta"><span>05</span><span>产业方向</span></div>
-<h3>Manufacturing</h3>
-<p class="terms-overview-terms">SMT · Assembly · Testing · Quality · Traceability</p>
-<p>产品怎么被装出来、测出来、修出来、稳定量产出来。</p>
-</article>
-<article class="terms-overview-card terms-overview-card-primary">
-<div class="terms-overview-meta"><span>06</span><span>工程技能</span></div>
-<h3>C++ / Python / Linux / Git</h3>
-<p class="terms-overview-terms">Build · Script · Shell · Version Control</p>
-<p>读代码、写脚本、跑工具、管版本、复现实验和定位问题。</p>
-</article>
-<article class="terms-overview-card terms-overview-card-positive">
-<div class="terms-overview-meta"><span>07</span><span>工程技能</span></div>
-<h3>PLC / MCU / Sensors</h3>
-<p class="terms-overview-terms">I/O · Firmware · ADC · Calibration</p>
-<p>让软件连接真实设备，读取现场信号并控制动作。</p>
-</article>
-<article class="terms-overview-card terms-overview-card-accent">
-<div class="terms-overview-meta"><span>08</span><span>学科基础</span></div>
-<h3>Math / Physics / Circuits</h3>
-<p class="terms-overview-terms">Matrix · Force · Voltage · Frequency</p>
-<p>理解运动、电能、信号、芯片、传感器和测量的底层语言。</p>
-</article>
-<article class="terms-overview-card terms-overview-card-neutral">
-<div class="terms-overview-meta"><span>09</span><span>学科基础</span></div>
-<h3>Programming / Control / Measurement</h3>
-<p class="terms-overview-terms">State · PID · Sampling · Error</p>
-<p>把模型、代码、反馈和数据连成可调试的工程系统。</p>
-</article>
-</div>
-</section>
-
 ## 产业方向
 
 | 方向 | 典型对象 | 常见问题 | 核心术语 | 优先补的基础 |
@@ -79,7 +20,7 @@ order: 6
 | Energy | 电池包、BMS、逆变器、充电器、储能柜、电机驱动、光伏 | 电能怎么转换，为什么会发热，电池怎么保护，电网怎么并联 | Battery, BMS, Inverter, Converter, Motor Drive, Grid, MPPT, Thermal Runaway | Circuits, Physics, Control, Measurement |
 | Manufacturing | SMT、装配、测试治具、产线、质检、维修、追溯系统 | 产品怎么从零件变成成品，怎么发现缺陷，怎么稳定批量生产 | SMT, Reflow, Assembly, Fixture, QA, QC, Traceability, Debugging | Measurement, Circuits, Programming |
 
-### Automation 术语
+### Automation
 
 | 英文词 | 中文 | 说人话 | 常见位置 |
 |---|---|---|---|
@@ -93,7 +34,7 @@ order: 6
 | Fieldbus | 现场总线 | 工业设备之间通信的网络。 | EtherCAT, PROFINET, CANopen |
 | Interlock | 联锁 | 为了安全或流程正确设置的互相限制条件。 | 门禁、安全、工艺顺序 |
 
-### Semiconductor Equipment 术语
+### Semiconductor Equipment
 
 | 英文词 | 中文 | 说人话 | 常见位置 |
 |---|---|---|---|
@@ -107,7 +48,7 @@ order: 6
 | Yield | 良率 | 合格芯片占比，直接影响成本。 | 制造、测试、质量 |
 | Packaging | 封装 | 把裸芯片保护起来并连接到外部电路。 | 封测厂、芯片模组 |
 
-### Robotics 术语
+### Robotics
 
 | 英文词 | 中文 | 说人话 | 常见位置 |
 |---|---|---|---|
@@ -121,7 +62,7 @@ order: 6
 | ROS | 机器人操作系统 | 机器人软件生态和通信框架。 | 机器人开发 |
 | Simulation | 仿真 | 在虚拟环境里测试机器人行为。 | 训练、验证、调试 |
 
-### Energy 术语
+### Energy
 
 | 英文词 | 中文 | 说人话 | 常见位置 |
 |---|---|---|---|
@@ -135,7 +76,7 @@ order: 6
 | Thermal Runaway | 热失控 | 电池发热失控，可能引发危险。 | 电池安全 |
 | Power Electronics | 电力电子 | 高效转换和控制电能的技术。 | 逆变器、电源、电机 |
 
-### Manufacturing 术语
+### Manufacturing
 
 | 英文词 | 中文 | 说人话 | 常见位置 |
 |---|---|---|---|
@@ -161,7 +102,7 @@ order: 6
 | Microcontrollers | 连接真实硬件，读传感器，控制电机或外设 | MCU、固件、GPIO、ADC、PWM、I2C、SPI | GPIO, Interrupt, Timer, ADC, PWM, Firmware | 能把引脚、外设、代码和电路连起来 |
 | Sensors | 把真实世界变成可用数据 | 温度、压力、位置、速度、相机、IMU | Accuracy, Resolution, Noise, Calibration, Sampling | 能判断数据是否可信，知道误差来自哪里 |
 
-### C++ 术语
+### C++
 
 | 英文词 | 中文 | 说人话 |
 |---|---|---|
@@ -173,7 +114,7 @@ order: 6
 | Build System | 构建系统 | 管理如何编译、链接和生成程序。 |
 | Real-Time | 实时 | 必须在规定时间内响应，不只是“很快”。 |
 
-### Python 术语
+### Python
 
 | 英文词 | 中文 | 说人话 |
 |---|---|---|
@@ -185,7 +126,7 @@ order: 6
 | API | 应用程序接口 | 程序之间约定好的调用方式。 |
 | Automation | 自动化 | 让重复操作由脚本完成。 |
 
-### Linux 术语
+### Linux
 
 | 英文词 | 中文 | 说人话 |
 |---|---|---|
@@ -197,7 +138,7 @@ order: 6
 | Service | 系统服务 | 后台长期运行的程序。 |
 | Log | 日志 | 系统或程序留下的运行记录。 |
 
-### Git 术语
+### Git
 
 | 英文词 | 中文 | 说人话 |
 |---|---|---|
@@ -209,7 +150,7 @@ order: 6
 | Pull | 拉取 | 从远端拿最新改动。 |
 | Push | 推送 | 把本地提交发到远端。 |
 
-### PLC 术语
+### PLC
 
 | 英文词 | 中文 | 说人话 |
 |---|---|---|
@@ -221,7 +162,7 @@ order: 6
 | Alarm | 报警 | 条件异常时提示人或让设备停机。 |
 | Safety Circuit | 安全回路 | 保证急停、门锁等安全条件有效。 |
 
-### Microcontrollers 术语
+### Microcontrollers
 
 | 英文词 | 中文 | 说人话 |
 |---|---|---|
@@ -234,7 +175,7 @@ order: 6
 | SPI | SPI 总线 | 常见高速芯片通信接口。 |
 | Interrupt | 中断 | 事件发生时打断当前程序，优先处理。 |
 
-### Sensors 术语
+### Sensors
 
 | 英文词 | 中文 | 说人话 |
 |---|---|---|
@@ -257,7 +198,7 @@ order: 6
 | Control | 反馈、稳定、PID、频响、运动控制 | 系统会震荡、超调、延迟或不跟随目标 | Feedback, PID, Stability, Transfer Function, Motion Control | Automation, Robotics, Energy |
 | Measurement | 采样、误差、校准、仪器、判断可信度 | 数据看起来有了，但不知道能不能信 | Accuracy, Precision, Resolution, Uncertainty, Calibration | Sensors, Manufacturing, Semiconductor Equipment |
 
-### Math 术语
+### Math
 
 | 英文词 | 中文 | 说人话 |
 |---|---|---|
@@ -270,7 +211,7 @@ order: 6
 | Fourier Transform | 傅里叶变换 | 把信号拆成不同频率来看。 |
 | Probability | 概率 | 描述不确定性。 |
 
-### Physics 术语
+### Physics
 
 | 英文词 | 中文 | 说人话 |
 |---|---|---|
@@ -282,7 +223,7 @@ order: 6
 | Vibration | 振动 | 系统来回摆动，可能带来噪声、疲劳和误差。 |
 | Electromagnetism | 电磁 | 电机、传感器、电源和信号的基础。 |
 
-### Circuits 术语
+### Circuits
 
 | 英文词 | 中文 | 说人话 |
 |---|---|---|
@@ -296,7 +237,7 @@ order: 6
 | Ground | 地 | 电路参考点，不等于随便接一根线。 |
 | ESD | 静电放电 | 静电瞬间释放，可能损坏芯片。 |
 
-### Programming 术语
+### Programming
 
 | 英文词 | 中文 | 说人话 |
 |---|---|---|
@@ -308,7 +249,7 @@ order: 6
 | Debugging | 调试 | 找问题、缩小范围、验证修复。 |
 | Latency | 延迟 | 从输入到响应之间的时间。 |
 
-### Control 术语
+### Control
 
 | 英文词 | 中文 | 说人话 |
 |---|---|---|
@@ -320,7 +261,7 @@ order: 6
 | Overshoot | 超调 | 超过目标值再回来。 |
 | Frequency Response | 频率响应 | 系统对不同频率输入的反应。 |
 
-### Measurement 术语
+### Measurement
 
 | 英文词 | 中文 | 说人话 |
 |---|---|---|

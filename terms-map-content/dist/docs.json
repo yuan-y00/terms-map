@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-29T13:40:18.315Z",
+  "generatedAt": "2026-05-29T13:44:58.889Z",
   "stats": {
     "total": 2,
     "byLang": {
@@ -89,28 +89,28 @@
         },
         {
           "level": 3,
-          "text": "Automation 术语",
-          "slug": "Automation 术语"
+          "text": "Automation",
+          "slug": "Automation"
         },
         {
           "level": 3,
-          "text": "Semiconductor Equipment 术语",
-          "slug": "Semiconductor Equipment 术语"
+          "text": "Semiconductor Equipment",
+          "slug": "Semiconductor Equipment"
         },
         {
           "level": 3,
-          "text": "Robotics 术语",
-          "slug": "Robotics 术语"
+          "text": "Robotics",
+          "slug": "Robotics"
         },
         {
           "level": 3,
-          "text": "Energy 术语",
-          "slug": "Energy 术语"
+          "text": "Energy",
+          "slug": "Energy"
         },
         {
           "level": 3,
-          "text": "Manufacturing 术语",
-          "slug": "Manufacturing 术语"
+          "text": "Manufacturing",
+          "slug": "Manufacturing"
         },
         {
           "level": 2,
@@ -119,38 +119,38 @@
         },
         {
           "level": 3,
-          "text": "C++ 术语",
-          "slug": "C++ 术语"
+          "text": "C++",
+          "slug": "C++"
         },
         {
           "level": 3,
-          "text": "Python 术语",
-          "slug": "Python 术语"
+          "text": "Python",
+          "slug": "Python"
         },
         {
           "level": 3,
-          "text": "Linux 术语",
-          "slug": "Linux 术语"
+          "text": "Linux",
+          "slug": "Linux"
         },
         {
           "level": 3,
-          "text": "Git 术语",
-          "slug": "Git 术语"
+          "text": "Git",
+          "slug": "Git"
         },
         {
           "level": 3,
-          "text": "PLC 术语",
-          "slug": "PLC 术语"
+          "text": "PLC",
+          "slug": "PLC"
         },
         {
           "level": 3,
-          "text": "Microcontrollers 术语",
-          "slug": "Microcontrollers 术语"
+          "text": "Microcontrollers",
+          "slug": "Microcontrollers"
         },
         {
           "level": 3,
-          "text": "Sensors 术语",
-          "slug": "Sensors 术语"
+          "text": "Sensors",
+          "slug": "Sensors"
         },
         {
           "level": 2,
@@ -159,37 +159,37 @@
         },
         {
           "level": 3,
-          "text": "Math 术语",
-          "slug": "Math 术语"
+          "text": "Math",
+          "slug": "Math"
         },
         {
           "level": 3,
-          "text": "Physics 术语",
-          "slug": "Physics 术语"
+          "text": "Physics",
+          "slug": "Physics"
         },
         {
           "level": 3,
-          "text": "Circuits 术语",
-          "slug": "Circuits 术语"
+          "text": "Circuits",
+          "slug": "Circuits"
         },
         {
           "level": 3,
-          "text": "Programming 术语",
-          "slug": "Programming 术语"
+          "text": "Programming",
+          "slug": "Programming"
         },
         {
           "level": 3,
-          "text": "Control 术语",
-          "slug": "Control 术语"
+          "text": "Control",
+          "slug": "Control"
         },
         {
           "level": 3,
-          "text": "Measurement 术语",
-          "slug": "Measurement 术语"
+          "text": "Measurement",
+          "slug": "Measurement"
         }
       ],
-      "wordCount": 1892,
-      "readingTime": 9
+      "wordCount": 1693,
+      "readingTime": 8
     }
   ]
 }
