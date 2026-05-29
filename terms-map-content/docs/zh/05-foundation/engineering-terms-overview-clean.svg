@@ -1,11 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="560" viewBox="0 0 1280 560" role="img" aria-labelledby="title desc">
   <title id="title">现代工程术语地图</title>
   <desc id="desc">用简洁分区展示工程术语牵到的知识方向。</desc>
   <defs>
     <style>
-      .hairline { stroke: #ded6ca; stroke-width: 1; }
-      .title { font: 800 34px "Noto Sans SC", "Microsoft YaHei", sans-serif; fill: #1f2933; }
-      .sub { font: 500 17px "Noto Sans SC", "Microsoft YaHei", sans-serif; fill: #66717d; }
       .card { fill: #fffefa; stroke: #ddd3c7; stroke-width: 1.5; }
       .accent { stroke-width: 4; stroke-linecap: round; }
       .num { font: 700 15px "Inter", "Arial", sans-serif; fill: #8b8176; }
@@ -19,69 +16,65 @@
     </style>
   </defs>
 
-  <text x="96" y="104" class="title">现代工程术语地图</text>
-  <text x="96" y="136" class="sub">看到一个词，先判断它属于哪个工程方向，再顺手补相关知识。</text>
-  <line x1="96" y1="168" x2="1184" y2="168" class="hairline"/>
-
   <g>
-    <rect x="96" y="206" width="328" height="158" rx="14" class="card"/>
-    <line x1="96" y1="206" x2="96" y2="364" class="accent" stroke="#9a5847"/>
-    <text x="124" y="242" class="num">01</text>
-    <text x="162" y="242" class="label">电机 / 电源</text>
-    <text x="124" y="284" class="h">电怎么转换和驱动</text>
-    <text x="124" y="318" class="p">BLDC · FOC · ESC · PWM</text>
-    <text x="124" y="344" class="s">电压电流、电磁、转动、反馈控制</text>
+    <rect x="96" y="84" width="328" height="158" rx="14" class="card"/>
+    <line x1="96" y1="84" x2="96" y2="242" class="accent" stroke="#9a5847"/>
+    <text x="124" y="120" class="num">01</text>
+    <text x="162" y="120" class="label">电机 / 电源</text>
+    <text x="124" y="162" class="h">电怎么转换和驱动</text>
+    <text x="124" y="196" class="p">BLDC · FOC · ESC · PWM</text>
+    <text x="124" y="222" class="s">电压电流、电磁、转动、反馈控制</text>
   </g>
 
   <g>
-    <rect x="476" y="206" width="328" height="158" rx="14" class="card"/>
-    <line x1="476" y1="206" x2="476" y2="364" class="accent" stroke="#4f6f8f"/>
-    <text x="504" y="242" class="num">02</text>
-    <text x="542" y="242" class="label">电路 / 信号</text>
-    <text x="504" y="284" class="h">信号怎么流，接口怎么工作</text>
-    <text x="504" y="318" class="p">PCB · RC · Signal · Noise</text>
-    <text x="504" y="344" class="s">滤波、采样、频率、接口保护</text>
+    <rect x="476" y="84" width="328" height="158" rx="14" class="card"/>
+    <line x1="476" y1="84" x2="476" y2="242" class="accent" stroke="#4f6f8f"/>
+    <text x="504" y="120" class="num">02</text>
+    <text x="542" y="120" class="label">电路 / 信号</text>
+    <text x="504" y="162" class="h">信号怎么流，接口怎么工作</text>
+    <text x="504" y="196" class="p">PCB · RC · Signal · Noise</text>
+    <text x="504" y="222" class="s">滤波、采样、频率、接口保护</text>
   </g>
 
   <g>
-    <rect x="856" y="206" width="328" height="158" rx="14" class="card"/>
-    <line x1="856" y1="206" x2="856" y2="364" class="accent" stroke="#5d7c67"/>
-    <text x="884" y="242" class="num">03</text>
-    <text x="922" y="242" class="label">GPU / AI 硬件</text>
-    <text x="884" y="284" class="h">芯片为什么能并行计算</text>
-    <text x="884" y="318" class="p">GPU · CUDA · Tensor Core</text>
-    <text x="884" y="344" class="s">矩阵、显存、总线、芯片结构</text>
+    <rect x="856" y="84" width="328" height="158" rx="14" class="card"/>
+    <line x1="856" y1="84" x2="856" y2="242" class="accent" stroke="#5d7c67"/>
+    <text x="884" y="120" class="num">03</text>
+    <text x="922" y="120" class="label">GPU / AI 硬件</text>
+    <text x="884" y="162" class="h">芯片为什么能并行计算</text>
+    <text x="884" y="196" class="p">GPU · CUDA · Tensor Core</text>
+    <text x="884" y="222" class="s">矩阵、显存、总线、芯片结构</text>
   </g>
 
   <g>
-    <rect x="96" y="402" width="518" height="154" rx="14" class="card"/>
-    <line x1="96" y1="402" x2="96" y2="556" class="accent" stroke="#806f4c"/>
-    <text x="124" y="438" class="num">04</text>
-    <text x="162" y="438" class="label">机器人 / 自动化</text>
-    <text x="124" y="480" class="h">代码怎么进入真实世界</text>
-    <text x="124" y="514" class="p">MCU · Firmware · RTOS · Sensor · Actuator · PLC</text>
-    <text x="124" y="540" class="s">传感器、执行器、实时控制、机器运动</text>
+    <rect x="96" y="280" width="518" height="154" rx="14" class="card"/>
+    <line x1="96" y1="280" x2="96" y2="434" class="accent" stroke="#806f4c"/>
+    <text x="124" y="316" class="num">04</text>
+    <text x="162" y="316" class="label">机器人 / 自动化</text>
+    <text x="124" y="358" class="h">代码怎么进入真实世界</text>
+    <text x="124" y="392" class="p">MCU · Firmware · RTOS · Sensor · Actuator · PLC</text>
+    <text x="124" y="418" class="s">传感器、执行器、实时控制、机器运动</text>
   </g>
 
   <g>
-    <rect x="666" y="402" width="518" height="154" rx="14" class="card"/>
-    <line x1="666" y1="402" x2="666" y2="556" class="accent" stroke="#8a6677"/>
-    <text x="694" y="438" class="num">05</text>
-    <text x="732" y="438" class="label">半导体 / 制造</text>
-    <text x="694" y="480" class="h">芯片和产品怎么被做出来</text>
-    <text x="694" y="514" class="p">Wafer · Lithography · Etching · Packaging · SMT</text>
-    <text x="694" y="540" class="s">芯片制造、焊接、测试、故障定位、设备维护</text>
+    <rect x="666" y="280" width="518" height="154" rx="14" class="card"/>
+    <line x1="666" y1="280" x2="666" y2="434" class="accent" stroke="#8a6677"/>
+    <text x="694" y="316" class="num">05</text>
+    <text x="732" y="316" class="label">半导体 / 制造</text>
+    <text x="694" y="358" class="h">芯片和产品怎么被做出来</text>
+    <text x="694" y="392" class="p">Wafer · Lithography · Etching · Packaging · SMT</text>
+    <text x="694" y="418" class="s">芯片制造、焊接、测试、故障定位、设备维护</text>
   </g>
 
   <g>
-    <rect x="96" y="596" width="1088" height="44" rx="12" fill="#faf7f1" stroke="#e0d7cb" stroke-width="1.5"/>
-    <text x="124" y="624" class="baseTitle">基础学科</text>
-    <text x="244" y="624" class="baseText">数学：三角函数、微积分、线性代数、傅里叶、概率</text>
-    <circle cx="610" cy="619" r="3" class="muted"/>
-    <text x="630" y="624" class="baseText">物理：力学、电磁、热、波</text>
-    <circle cx="820" cy="619" r="3" class="muted"/>
-    <text x="840" y="624" class="baseText">电子：RC/RL、晶体管、电源、电路板</text>
-    <circle cx="1082" cy="619" r="3" class="muted"/>
-    <text x="1102" y="624" class="baseText">编程</text>
+    <rect x="96" y="474" width="1088" height="44" rx="12" fill="#faf7f1" stroke="#e0d7cb" stroke-width="1.5"/>
+    <text x="124" y="502" class="baseTitle">基础学科</text>
+    <text x="244" y="502" class="baseText">数学：三角函数、微积分、线性代数、傅里叶、概率</text>
+    <circle cx="610" cy="497" r="3" class="muted"/>
+    <text x="630" y="502" class="baseText">物理：力学、电磁、热、波</text>
+    <circle cx="820" cy="497" r="3" class="muted"/>
+    <text x="840" y="502" class="baseText">电子：RC/RL、晶体管、电源、电路板</text>
+    <circle cx="1082" cy="497" r="3" class="muted"/>
+    <text x="1102" y="502" class="baseText">编程</text>
   </g>
 </svg>
