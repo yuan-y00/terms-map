@@ -29,8 +29,8 @@ const CONFIG = {
     location.protocol === "file:",
 
   /* Content data root. Local and monorepo Pages deployments use sibling dirs. */
-  contentBaseLocal: "/ema-wiki-content",
-  contentBaseRemote: "../ema-wiki-content",
+  contentBaseLocal: "/terms-map-content",
+  contentBaseRemote: "../terms-map-content",
 
   /* Automatically set based on environment */
   get contentBase() {

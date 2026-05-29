@@ -14,7 +14,7 @@ const Api = (() => {
    * contentUrl — 将相对路径转为完整 URL
    *
    *   contentUrl('/dist/docs.json')
-   *   → 'http://localhost:8080/ema-wiki-content/dist/docs.json'  (本地)
+   *   → 'http://localhost:8080/terms-map-content/dist/docs.json'  (本地)
    *   → 'https://raw.githubusercontent.com/.../main/dist/docs.json' (远程)
    *
    *   如果 path 已经是 http/https URL，则原样返回。
@@ -46,7 +46,7 @@ const Api = (() => {
       throw new Error(
         "Network request failed: " + url + "\n" +
         "Reason: " + (netErr.message || "Unknown network error") + "\n" +
-        "Hint: Make sure you started the server from D:\\Yuan\\ema-wiki (python -m http.server 8080)"
+        "Hint: Make sure you started the server from D:\\Yuan\\terms-map (python -m http.server 8080)"
       );
     }
 

@@ -1,6 +1,6 @@
 # 术语地图展示站
 
-这是术语地图的纯静态展示站。站点从 `ema-wiki-content/dist/` 读取文档索引、搜索索引和资源 JSON，渲染为首页、文档页、资源页和搜索页。
+这是术语地图的纯静态展示站。站点从 `terms-map-content/dist/` 读取文档索引、搜索索引和资源 JSON，渲染为首页、文档页、资源页和搜索页。
 
 ## 技术栈
 
@@ -14,21 +14,21 @@
 先在内容仓库生成 dist：
 
 ```bash
-cd D:\Yuan\ema-wiki\ema-wiki-content
+cd D:\Yuan\terms-map\terms-map-content
 node scripts\build-index.mjs
 ```
 
-再从项目根目录 `D:\Yuan\ema-wiki` 启动静态服务器：
+再从项目根目录 `D:\Yuan\terms-map` 启动静态服务器：
 
 ```bash
-cd D:\Yuan\ema-wiki
+cd D:\Yuan\terms-map
 python -m http.server 8080
 ```
 
 访问：
 
 ```text
-http://localhost:8080/ema-wiki-site/
+http://localhost:8080/terms-map-site/
 ```
 
 ## 当前内容方向

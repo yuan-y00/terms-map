@@ -40,14 +40,14 @@ node scripts/build-index.mjs --check --strict
 ## 本地预览
 
 ```bash
-cd D:\Yuan\ema-wiki
+cd D:\Yuan\terms-map
 python -m http.server 8080
 ```
 
 访问：
 
 ```text
-http://localhost:8080/ema-wiki-site/
+http://localhost:8080/terms-map-site/
 ```
 
 ## 不做什么

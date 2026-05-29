@@ -8,7 +8,7 @@
  */
 
 const I18n = (() => {
-  const STORAGE_KEY = "ema-wiki-lang";
+  const STORAGE_KEY = "terms-map-lang";
 
   /* UI strings for each supported language */
   const strings = {

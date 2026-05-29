@@ -7,7 +7,7 @@
  * - 切换时更新 document.documentElement 的 data-theme 属性
  */
 const Theme = (() => {
-  const STORAGE_KEY = "ema-wiki-theme";
+  const STORAGE_KEY = "terms-map-theme";
   const ATTR = "data-theme";
 
   /* Resolve initial theme */

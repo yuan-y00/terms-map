@@ -8,7 +8,7 @@
   "supportedLangs": ["zh", "en"],
   "contentRepo": "",
   "siteRepo": "",
-  "rawBase": "../ema-wiki-content",
+  "rawBase": "../terms-map-content",
   "editBase": "",
   "categories": [
     { "id": "overview", "order": 0, "label": { "zh": "术语与案例", "en": "Terms and Cases" } },
