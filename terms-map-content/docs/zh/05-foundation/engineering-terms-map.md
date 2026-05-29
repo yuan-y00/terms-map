@@ -12,7 +12,7 @@ order: 6
 
 你在装机、维修、视频、项目、设备说明或日常使用里遇到一个词，往往不是只差一个翻译，而是它背后牵出一整块知识。
 
-![现代工程术语地图](./engineering-terms-mindmap.svg)
+![现代工程术语地图](./engineering-terms-overview.svg)
 
 ## 电机、电源与控制
 

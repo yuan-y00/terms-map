@@ -578,7 +578,7 @@
   margin: 0.75em 0;
 }
 
-.markdown-body img[src*="engineering-terms-mindmap.svg"] {
+.markdown-body img[src*="engineering-terms-overview.svg"] {
   display: block;
   width: 100%;
   margin: 1.2em 0 2em;
