@@ -737,13 +737,6 @@
  * ========================================================================== */
 .terms-overview {
   margin: 1.75em 0 2.35em;
-  padding: 1.35em;
-  background:
-    radial-gradient(circle at top left, rgba(194, 81, 59, 0.045), transparent 28%),
-    linear-gradient(180deg, var(--color-surface) 0%, var(--color-surface-soft) 100%);
-  border: 1px solid var(--color-border-light);
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-sm);
 }
 
 .terms-overview-grid {
@@ -764,18 +757,6 @@
   padding: 1.05em 1.15em 1.15em;
   min-height: 9.1em;
   overflow: hidden;
-}
-
-.terms-overview-card::after {
-  content: "";
-  position: absolute;
-  right: -0.2em;
-  bottom: -0.38em;
-  width: 4.2em;
-  height: 4.2em;
-  border-radius: 999px;
-  background: var(--terms-accent);
-  opacity: 0.055;
 }
 
 .terms-overview-card-accent { --terms-accent: var(--color-accent); --terms-bg: #FDF6F2; }
