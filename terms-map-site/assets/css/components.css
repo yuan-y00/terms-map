@@ -736,93 +736,107 @@
  * Engineering Terms Overview — BR-Theme card language
  * ========================================================================== */
 .terms-overview {
-  margin: 1.75em 0 2.25em;
+  margin: 1.75em 0 2.35em;
+  padding: 1.35em;
+  background:
+    radial-gradient(circle at top left, rgba(194, 81, 59, 0.045), transparent 28%),
+    linear-gradient(180deg, var(--color-surface) 0%, var(--color-surface-soft) 100%);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
 }
 
 .terms-overview-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.15em;
+  gap: 1em;
 }
 
 .terms-overview-card {
+  --terms-accent: var(--color-accent);
+  --terms-bg: var(--color-accent-bg);
   position: relative;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  background: linear-gradient(180deg, var(--terms-bg) 0%, var(--color-surface) 74%);
+  border: 1px solid var(--color-border-light);
+  border-top: 3px solid var(--terms-accent);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
-  padding: 1.15em 1.3em;
-  min-height: 9.5em;
+  padding: 1.05em 1.15em 1.15em;
+  min-height: 9.1em;
   overflow: hidden;
 }
 
 .terms-overview-card::after {
   content: "";
   position: absolute;
-  left: 1.3em;
-  right: 1.3em;
-  bottom: 0;
-  height: 3px;
-  background: linear-gradient(to right, var(--color-text) 0 44px, var(--color-border) 44px 100%);
-  opacity: 0.22;
+  right: -0.2em;
+  bottom: -0.38em;
+  width: 4.2em;
+  height: 4.2em;
+  border-radius: 999px;
+  background: var(--terms-accent);
+  opacity: 0.055;
 }
 
-.terms-overview-card-primary,
-.terms-overview-card-positive,
-.terms-overview-card-neutral,
-.terms-overview-card-muted {
-  border-left-color: var(--color-border);
-}
+.terms-overview-card-accent { --terms-accent: var(--color-accent); --terms-bg: #FDF6F2; }
+.terms-overview-card-primary { --terms-accent: var(--color-primary); --terms-bg: #F2F5FA; }
+.terms-overview-card-positive { --terms-accent: var(--color-positive); --terms-bg: #F2F8F4; }
+.terms-overview-card-neutral { --terms-accent: #8B7350; --terms-bg: #FAF6EC; }
+.terms-overview-card-muted { --terms-accent: #9A6A7D; --terms-bg: #FBF3F7; }
 
 .terms-overview-meta {
   display: flex;
   align-items: center;
-  gap: 0.75em;
-  margin-bottom: 0.55em;
-  color: var(--color-muted);
+  gap: 0.55em;
+  margin-bottom: 0.65em;
+  color: var(--terms-accent);
   font-size: var(--font-size-xs);
   font-weight: 700;
 }
 
 .terms-overview-meta span:first-child {
-  position: absolute;
-  right: 0.35em;
-  top: 0.05em;
-  color: var(--color-text);
-  font-family: var(--font-serif);
-  font-size: 3.8em;
-  font-weight: 900;
-  line-height: 1;
-  opacity: 0.055;
-  pointer-events: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.2em;
+  height: 1.8em;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(28, 28, 28, 0.06);
+  color: var(--terms-accent);
+  font-family: var(--font-sans);
+  font-size: 0.92em;
+  letter-spacing: 0;
 }
 
 .terms-overview-meta span:last-child {
-  letter-spacing: 0.06em;
+  color: var(--color-text-secondary);
+  font-family: var(--font-sans);
+  letter-spacing: 0.03em;
 }
 
 .terms-overview-card h3 {
-  margin: 0 0 0.45em;
+  margin: 0 0 0.5em;
   color: var(--color-text);
   font-family: var(--font-serif);
-  font-size: var(--font-size-xl);
+  font-size: 19px;
   font-weight: 900;
-  line-height: 1.25;
+  line-height: 1.28;
 }
 
 .terms-overview-card p {
   margin: 0;
   color: var(--color-text-secondary);
-  font-size: var(--font-size-sm);
+  font-size: var(--font-size-xs);
   line-height: 1.55;
 }
 
 .terms-overview-card .terms-overview-terms {
-  margin-bottom: 0.45em;
-  color: var(--color-text-secondary);
-  font-family: var(--font-mono);
-  font-size: var(--font-size-xs);
-  font-weight: 600;
+  margin-bottom: 0.5em;
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 800;
   letter-spacing: 0;
 }
 
@@ -830,11 +844,12 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 0.55em 1.2em;
+  gap: 0.55em 1.1em;
   margin-top: 1.15em;
-  padding: 1em 1.15em;
+  padding: 0.95em 1.1em;
   background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-border-light);
+  border-left: 4px solid var(--color-primary);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
   color: var(--color-text-secondary);
@@ -845,9 +860,9 @@
 .terms-overview-foundation strong {
   color: var(--color-text);
   font-family: var(--font-serif);
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-base);
   font-weight: 900;
-  margin-right: 0.2em;
+  margin-right: 0.3em;
 }
 
 @media (max-width: 900px) {
