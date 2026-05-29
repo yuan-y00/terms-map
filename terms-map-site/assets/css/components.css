@@ -1495,10 +1495,10 @@ mark, .search-result-title mark, .search-result-snippet mark {
 .resource-card-footer {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 0.5em;
-  padding-top: 0.5em;
+  padding-top: 0.35em;
   border-top: 0;
   margin-top: auto;
 }
@@ -1510,6 +1510,7 @@ mark, .search-result-title mark, .search-result-snippet mark {
 .resource-card-actions {
   display: flex;
   gap: 0.5em;
+  width: 100%;
 }
 
 .resource-direct-link {
@@ -2324,6 +2325,7 @@ mark, .search-result-title mark, .search-result-snippet mark {
   color: #FFF8F0;
   font-weight: 800;
   box-shadow: 0 8px 18px rgba(43, 45, 66, 0.15);
+  margin-top: 0.25em;
 }
 
 .resource-direct-link:hover {
