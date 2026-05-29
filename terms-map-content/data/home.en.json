@@ -5,10 +5,23 @@
     "description": ""
   },
   "tracks": [
-    { "id": "math", "icon": "M", "label": "Math", "description": "Trigonometry, calculus, linear algebra and Fourier intuition", "link": "#/resources?track=math" },
-    { "id": "physics", "icon": "P", "label": "Physics", "description": "Mechanics, energy, rotation, vibration and physical intuition", "link": "#/resources?track=physics" },
-    { "id": "electronics", "icon": "E", "label": "Electronics", "description": "Voltage, current, circuits, semiconductors, power and PCBs", "link": "#/resources?track=electronics" },
-    { "id": "programming", "icon": "C", "label": "Programming", "description": "Python, C++, CLI, Git, debugging and data processing", "link": "#/resources?track=programming" },
-    { "id": "signals-control", "icon": "S", "label": "Signals and Control", "description": "Sampling, FFT, filtering, PID, feedback and frequency response", "link": "#/resources?track=signals-control" }
+    { "id": "automation", "group": "Industry Direction", "icon": "A", "label": "Automation", "description": "Automation systems, production lines, actuators, control cabinets and factory sites", "link": "#/resources?track=automation" },
+    { "id": "semiconductor-equipment", "group": "Industry Direction", "icon": "S", "label": "Semiconductor Equipment", "description": "Semiconductor tools, chips, GPUs, packaging, testing and process objects", "link": "#/resources?track=semiconductor-equipment" },
+    { "id": "robotics", "group": "Industry Direction", "icon": "R", "label": "Robotics", "description": "Robots, simulation, sensors, motion control and real-world deployment", "link": "#/resources?track=robotics" },
+    { "id": "energy", "group": "Industry Direction", "icon": "E", "label": "Energy", "description": "Batteries, power supplies, storage, motors, inverters and energy systems", "link": "#/resources?track=energy" },
+    { "id": "manufacturing", "group": "Industry Direction", "icon": "M", "label": "Manufacturing", "description": "SMT, assembly, testing, factory workflow and quality control", "link": "#/resources?track=manufacturing" },
+    { "id": "cpp", "group": "Engineering Skills", "icon": "C", "label": "C++", "description": "Embedded software, performance, real-time systems and engineering code foundations", "link": "#/resources?track=cpp" },
+    { "id": "python", "group": "Engineering Skills", "icon": "P", "label": "Python", "description": "Scripts, data processing, automation, lab notes and small tools", "link": "#/resources?track=python" },
+    { "id": "linux", "group": "Engineering Skills", "icon": "L", "label": "Linux", "description": "Command line, system environments, device debugging and server basics", "link": "#/resources?track=linux" },
+    { "id": "git", "group": "Engineering Skills", "icon": "G", "label": "Git", "description": "Version control, collaboration, resource maintenance and engineering records", "link": "#/resources?track=git" },
+    { "id": "plc", "group": "Engineering Skills", "icon": "P", "label": "PLC", "description": "Industrial control, I/O, ladder logic, field buses and production-line logic", "link": "#/resources?track=plc" },
+    { "id": "microcontrollers", "group": "Engineering Skills", "icon": "M", "label": "Microcontrollers", "description": "MCUs, firmware, peripherals, real-time control and hardware interfaces", "link": "#/resources?track=microcontrollers" },
+    { "id": "sensors", "group": "Engineering Skills", "icon": "S", "label": "Sensors", "description": "Sensors, sampling, calibration, noise and data readings", "link": "#/resources?track=sensors" },
+    { "id": "math", "group": "Foundation", "icon": "M", "label": "Math", "description": "Trigonometry, calculus, linear algebra, probability and Fourier intuition", "link": "#/resources?track=math" },
+    { "id": "physics", "group": "Foundation", "icon": "P", "label": "Physics", "description": "Mechanics, energy, rotation, vibration and physical intuition", "link": "#/resources?track=physics" },
+    { "id": "circuits", "group": "Foundation", "icon": "C", "label": "Circuits", "description": "Voltage, current, circuits, semiconductors, power and PCBs", "link": "#/resources?track=circuits" },
+    { "id": "programming", "group": "Foundation", "icon": "P", "label": "Programming", "description": "Programming concepts, data structures, debugging and engineering code reading", "link": "#/resources?track=programming" },
+    { "id": "control", "group": "Foundation", "icon": "C", "label": "Control", "description": "PID, feedback, stability, frequency response and motion control", "link": "#/resources?track=control" },
+    { "id": "measurement", "group": "Foundation", "icon": "M", "label": "Measurement", "description": "Measurement, error, instruments, sampling, calibration and experiment judgment", "link": "#/resources?track=measurement" }
   ]
 }

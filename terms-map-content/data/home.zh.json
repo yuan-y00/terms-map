@@ -5,10 +5,23 @@
     "description": ""
   },
   "tracks": [
-    { "id": "math", "icon": "M", "label": "数学", "description": "三角函数、微积分、线性代数、傅里叶入口", "link": "#/resources?track=math" },
-    { "id": "physics", "icon": "P", "label": "物理", "description": "力学、能量、转动、振动和工程对象直觉", "link": "#/resources?track=physics" },
-    { "id": "electronics", "icon": "E", "label": "电子", "description": "电压电流、电路、半导体、电源和 PCB", "link": "#/resources?track=electronics" },
-    { "id": "programming", "icon": "C", "label": "编程", "description": "Python、C++、命令行、Git、调试和数据处理", "link": "#/resources?track=programming" },
-    { "id": "signals-control", "icon": "S", "label": "信号与控制", "description": "采样、FFT、滤波、PID、反馈和频响", "link": "#/resources?track=signals-control" }
+    { "id": "automation", "group": "产业方向", "icon": "A", "label": "Automation", "description": "自动化系统、产线、执行器、控制柜和工程现场", "link": "#/resources?track=automation" },
+    { "id": "semiconductor-equipment", "group": "产业方向", "icon": "S", "label": "Semiconductor Equipment", "description": "半导体设备、芯片、GPU、封装、测试和工艺对象", "link": "#/resources?track=semiconductor-equipment" },
+    { "id": "robotics", "group": "产业方向", "icon": "R", "label": "Robotics", "description": "机器人、仿真、传感器、运动控制和真实部署", "link": "#/resources?track=robotics" },
+    { "id": "energy", "group": "产业方向", "icon": "E", "label": "Energy", "description": "电池、电源、储能、电机、逆变器和能源系统", "link": "#/resources?track=energy" },
+    { "id": "manufacturing", "group": "产业方向", "icon": "M", "label": "Manufacturing", "description": "SMT、装配、测试、工厂流程和质量控制", "link": "#/resources?track=manufacturing" },
+    { "id": "cpp", "group": "工程技能", "icon": "C", "label": "C++", "description": "嵌入式、性能、实时系统和工程软件基础", "link": "#/resources?track=cpp" },
+    { "id": "python", "group": "工程技能", "icon": "P", "label": "Python", "description": "脚本、数据处理、自动化、实验记录和小工具", "link": "#/resources?track=python" },
+    { "id": "linux", "group": "工程技能", "icon": "L", "label": "Linux", "description": "命令行、系统环境、设备调试和服务器基础", "link": "#/resources?track=linux" },
+    { "id": "git", "group": "工程技能", "icon": "G", "label": "Git", "description": "版本控制、协作、资料维护和工程记录", "link": "#/resources?track=git" },
+    { "id": "plc", "group": "工程技能", "icon": "P", "label": "PLC", "description": "工业控制、I/O、梯形图、现场总线和产线逻辑", "link": "#/resources?track=plc" },
+    { "id": "microcontrollers", "group": "工程技能", "icon": "M", "label": "Microcontrollers", "description": "MCU、固件、外设、实时控制和硬件接口", "link": "#/resources?track=microcontrollers" },
+    { "id": "sensors", "group": "工程技能", "icon": "S", "label": "Sensors", "description": "传感器、采样、标定、噪声和数据读数", "link": "#/resources?track=sensors" },
+    { "id": "math", "group": "学科基础", "icon": "M", "label": "Math", "description": "三角函数、微积分、线性代数、概率和傅里叶入口", "link": "#/resources?track=math" },
+    { "id": "physics", "group": "学科基础", "icon": "P", "label": "Physics", "description": "力学、能量、转动、振动和工程对象直觉", "link": "#/resources?track=physics" },
+    { "id": "circuits", "group": "学科基础", "icon": "C", "label": "Circuits", "description": "电压电流、电路、半导体、电源和 PCB", "link": "#/resources?track=circuits" },
+    { "id": "programming", "group": "学科基础", "icon": "P", "label": "Programming", "description": "编程概念、数据结构、调试和工程代码阅读", "link": "#/resources?track=programming" },
+    { "id": "control", "group": "学科基础", "icon": "C", "label": "Control", "description": "PID、反馈、稳定性、频响和运动控制", "link": "#/resources?track=control" },
+    { "id": "measurement", "group": "学科基础", "icon": "M", "label": "Measurement", "description": "测量、误差、仪器、采样、校准和实验判断", "link": "#/resources?track=measurement" }
   ]
 }

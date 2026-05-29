@@ -1,79 +1,11 @@
 {
-  "version": 3,
+  "version": 4,
   "updatedAt": "2026-05-29",
   "description": {
     "zh": "术语地图工程术语与资源索引。",
     "en": "Engineering terms and resources for 术语地图."
   },
   "items": [
-    {
-      "id": "nvidia-how-robots-learn",
-      "card_kind": "resource",
-      "title": "How Robots Learn to Be Robots",
-      "source": "NVIDIA",
-      "url": "https://www.youtube.com/watch?v=UQZooauU-FQ",
-      "type": "video",
-      "lang": "en",
-      "level": "beginner",
-      "audience_level": "先看懂大概",
-      "track": "physics",
-      "category": "physics",
-      "scope": "engineering-terms",
-      "foundation_module": "物理",
-      "summary": {
-        "zh": "机器人训练、仿真和真实部署的入门视频。画面强，节奏好，适合作为第一眼入口。",
-        "en": "An accessible entry point into robot training, simulation and real-world deployment."
-      },
-      "best_for": {
-        "zh": "想先对机器人、仿真、传感器和真实部署建立兴趣的人。",
-        "en": "Learners who want a first intuition for robotics, simulation, sensors and deployment."
-      },
-      "related_terms": ["robotics", "simulation", "sensor", "deployment", "training"],
-      "tags": ["robotics", "simulation", "nvidia", "reviewed-video"],
-      "featured": true,
-      "home_featured": true,
-      "priority": 1,
-      "verified_date": "2026-05-29",
-      "media": {
-        "type": "youtube",
-        "youtube_video_id": "UQZooauU-FQ",
-        "thumbnail_url": "https://img.youtube.com/vi/UQZooauU-FQ/hqdefault.jpg"
-      }
-    },
-    {
-      "id": "smartphone-manufacturing-china",
-      "card_kind": "resource",
-      "title": "How Smartphones Are Made in China",
-      "source": "YouTube",
-      "url": "https://www.youtube.com/watch?v=SF5Y2JovNPQ",
-      "type": "video",
-      "lang": "en",
-      "level": "beginner",
-      "audience_level": "先看懂大概",
-      "track": "electronics",
-      "category": "electronics",
-      "scope": "engineering-terms",
-      "foundation_module": "电子",
-      "summary": {
-        "zh": "手机制造现场入口。能直观看到 SMT、装配、测试和工厂流程。",
-        "en": "A visual entry point into smartphone manufacturing, SMT, assembly, testing and factory workflow."
-      },
-      "best_for": {
-        "zh": "想先看真实制造现场，再理解 PCB、SMT、测试和装配这些词的人。",
-        "en": "Learners who want a concrete factory context for PCB, SMT, testing and assembly terms."
-      },
-      "related_terms": ["smartphone", "smt", "pcb", "assembly", "testing"],
-      "tags": ["manufacturing", "smartphone", "smt", "reviewed-video"],
-      "featured": true,
-      "home_featured": true,
-      "priority": 2,
-      "verified_date": "2026-05-29",
-      "media": {
-        "type": "youtube",
-        "youtube_video_id": "SF5Y2JovNPQ",
-        "thumbnail_url": "https://img.youtube.com/vi/SF5Y2JovNPQ/hqdefault.jpg"
-      }
-    },
     {
       "id": "branch-education-gpu-architecture",
       "card_kind": "resource",
@@ -84,10 +16,10 @@
       "lang": "en",
       "level": "beginner",
       "audience_level": "先看懂大概",
-      "track": "electronics",
-      "category": "electronics",
+      "track": "semiconductor-equipment",
+      "category": "semiconductor-equipment",
       "scope": "engineering-terms",
-      "foundation_module": "电子",
+      "foundation_module": "产业方向 / Semiconductor Equipment",
       "summary": {
         "zh": "高质量 GPU 架构视频。适合把显卡、GPU、显存、并行计算这些词放到同一个画面里理解。",
         "en": "A strong visual explanation of GPU architecture, graphics cards, VRAM and parallel computing."
@@ -97,10 +29,10 @@
         "en": "Learners who need a visual map before AI hardware, GPU reviews, CUDA or architecture topics."
       },
       "related_terms": ["gpu", "graphics-card", "vram", "cuda", "parallel-computing"],
-      "tags": ["gpu", "ai-hardware", "architecture", "reviewed-video"],
+      "tags": ["semiconductor-equipment", "gpu", "ai-hardware", "reviewed-video"],
       "featured": true,
       "home_featured": true,
-      "priority": 3,
+      "priority": 201,
       "verified_date": "2026-05-29",
       "media": {
         "type": "youtube",
@@ -118,10 +50,10 @@
       "lang": "en",
       "level": "intermediate",
       "audience_level": "先看懂大概",
-      "track": "electronics",
-      "category": "electronics",
+      "track": "semiconductor-equipment",
+      "category": "semiconductor-equipment",
       "scope": "engineering-terms",
-      "foundation_module": "电子",
+      "foundation_module": "产业方向 / Semiconductor Equipment",
       "summary": {
         "zh": "从一颗真实 CPU 的结构聊到芯片布局、缓存、时钟、封装和测试，适合把抽象术语放回真实硬件里看。",
         "en": "A CPU engineering discussion that connects die layout, cache, clocking, packaging and testing to real hardware."
@@ -131,10 +63,10 @@
         "en": "Learners who want to connect CPU, GPU, SoC, packaging and hardware-review terms to real silicon."
       },
       "related_terms": ["cpu", "chiplet", "cache", "clock-domain", "packaging", "silicon"],
-      "tags": ["cpu", "hardware", "semiconductor", "reviewed-video"],
+      "tags": ["semiconductor-equipment", "cpu", "hardware", "reviewed-video"],
       "featured": true,
       "home_featured": true,
-      "priority": 4,
+      "priority": 202,
       "verified_date": "2026-05-29",
       "media": {
         "type": "youtube",
@@ -143,311 +75,72 @@
       }
     },
     {
-      "id": "3b1b-essence-calculus",
+      "id": "nvidia-how-robots-learn",
       "card_kind": "resource",
-      "title": "Essence of Calculus",
-      "source": "3Blue1Brown",
-      "url": "https://www.youtube.com/watch?v=WUvTyaaNkzM",
+      "title": "How Robots Learn to Be Robots",
+      "source": "NVIDIA",
+      "url": "https://www.youtube.com/watch?v=UQZooauU-FQ",
       "type": "video",
       "lang": "en",
       "level": "beginner",
       "audience_level": "先看懂大概",
-      "track": "math",
-      "category": "math",
+      "track": "robotics",
+      "category": "robotics",
       "scope": "engineering-terms",
-      "foundation_module": "数学",
+      "foundation_module": "产业方向 / Robotics",
       "summary": {
-        "zh": "用视觉方式理解导数、积分和变化率。适合先建立工程直觉，不要求先刷完整套题。",
-        "en": "Visual intuition for derivatives, integrals and rates of change."
+        "zh": "机器人训练、仿真和真实部署的入门视频。画面强，节奏好，适合作为第一眼入口。",
+        "en": "An accessible entry point into robot training, simulation and real-world deployment."
       },
       "best_for": {
-        "zh": "看电机、控制、信号、热和运动类资源时，对变化率没有感觉的人。",
-        "en": "Learners who need intuition for rate of change before engineering resources."
+        "zh": "想先对机器人、仿真、传感器和真实部署建立兴趣的人。",
+        "en": "Learners who want a first intuition for robotics, simulation, sensors and deployment."
       },
-      "related_terms": ["derivative", "integral", "rate-of-change"],
-      "tags": ["math", "calculus", "intuition"],
+      "related_terms": ["robotics", "simulation", "sensor", "deployment", "training"],
+      "tags": ["robotics", "simulation", "nvidia", "reviewed-video"],
       "featured": true,
       "home_featured": true,
-      "priority": 10,
-      "verified_date": "2026-05-27",
-      "media": {
-        "type": "youtube",
-        "youtube_video_id": "WUvTyaaNkzM",
-        "thumbnail_url": "https://img.youtube.com/vi/WUvTyaaNkzM/hqdefault.jpg"
-      }
-    },
-    {
-      "id": "3b1b-essence-linear-algebra",
-      "card_kind": "resource",
-      "title": "Essence of Linear Algebra",
-      "source": "3Blue1Brown",
-      "url": "https://www.youtube.com/watch?v=fNk_zzaMoSs",
-      "type": "video",
-      "lang": "en",
-      "level": "beginner",
-      "audience_level": "先看懂大概",
-      "track": "math",
-      "category": "math",
-      "scope": "engineering-terms",
-      "foundation_module": "数学",
-      "summary": {
-        "zh": "用几何方式理解向量、矩阵和线性变换，帮助看懂 GPU、机器人和控制。",
-        "en": "Geometric intuition for vectors, matrices and linear transformations."
-      },
-      "best_for": {
-        "zh": "看 GPU、机器人坐标变换、传感器数据和控制算法时，被矩阵卡住的人。",
-        "en": "Learners blocked by vectors and matrices in GPU, robotics or control topics."
-      },
-      "related_terms": ["vector", "matrix", "linear-transform"],
-      "tags": ["math", "linear-algebra", "gpu", "robotics"],
-      "featured": true,
-      "home_featured": true,
-      "priority": 20,
-      "verified_date": "2026-05-27",
-      "media": {
-        "type": "youtube",
-        "youtube_video_id": "fNk_zzaMoSs",
-        "thumbnail_url": "https://img.youtube.com/vi/fNk_zzaMoSs/hqdefault.jpg"
-      }
-    },
-    {
-      "id": "khan-trigonometry",
-      "card_kind": "resource",
-      "title": "Trigonometry",
-      "source": "Khan Academy",
-      "url": "https://www.khanacademy.org/math/trigonometry",
-      "type": "course",
-      "lang": "en",
-      "level": "beginner",
-      "audience_level": "补一个卡住的概念",
-      "track": "math",
-      "category": "math",
-      "scope": "engineering-terms",
-      "foundation_module": "数学",
-      "summary": {
-        "zh": "补三角函数、正弦波、角度和单位圆，支撑交流电、电机、振动和傅里叶。",
-        "en": "Trigonometry practice for sine waves, angles, AC circuits, motors and Fourier intuition."
-      },
-      "best_for": {
-        "zh": "看 PWM、FOC、交流电、频率和波形时，sin/cos 已经不顺手的人。",
-        "en": "Learners who need trigonometry for waves, PWM, FOC and AC signals."
-      },
-      "related_terms": ["sine-wave", "phase", "frequency"],
-      "tags": ["math", "trigonometry", "signals"],
-      "featured": true,
-      "home_featured": false,
-      "priority": 30,
-      "verified_date": "2026-05-26"
-    },
-    {
-      "id": "khan-physics-1",
-      "card_kind": "resource",
-      "title": "AP/College Physics 1",
-      "source": "Khan Academy",
-      "url": "https://www.khanacademy.org/science/ap-college-physics-1",
-      "type": "course",
-      "lang": "en",
-      "level": "beginner",
-      "audience_level": "补一个卡住的概念",
-      "track": "physics",
-      "category": "physics",
-      "scope": "engineering-terms",
-      "foundation_module": "物理",
-      "summary": {
-        "zh": "代数基础物理，补力、能量、动量、转动和振动。只在看机器人、机械臂、制造设备时按需进入。",
-        "en": "Algebra-based mechanics foundation for force, energy, momentum, rotation and oscillation."
-      },
-      "best_for": {
-        "zh": "看机器人、执行器、运动控制和设备机构时，对力学对象没有画面的人。",
-        "en": "Learners who need mechanics intuition for robots, actuators and manufacturing equipment."
-      },
-      "related_terms": ["force", "energy", "momentum", "rotation"],
-      "tags": ["physics", "mechanics", "robotics"],
-      "featured": true,
-      "home_featured": false,
-      "priority": 40,
-      "verified_date": "2026-05-26"
-    },
-    {
-      "id": "khan-electrical-engineering",
-      "card_kind": "resource",
-      "title": "Electrical Engineering",
-      "source": "Khan Academy",
-      "url": "https://www.khanacademy.org/science/electrical-engineering",
-      "type": "course",
-      "lang": "en",
-      "level": "beginner",
-      "audience_level": "补一个卡住的概念",
-      "track": "electronics",
-      "category": "electronics",
-      "scope": "engineering-terms",
-      "foundation_module": "电子",
-      "summary": {
-        "zh": "补电压、电流、电路、半导体和基础电子概念，适合看电源、电机、PCB 和维修内容前查漏补缺。",
-        "en": "Foundation for voltage, current, circuits, semiconductors and basic electronics."
-      },
-      "best_for": {
-        "zh": "看 MOSFET、PCB、电源、维修和电机驱动时，不清楚电路在做什么的人。",
-        "en": "Learners who need circuit intuition for MOSFETs, PCBs, power supplies and motor drives."
-      },
-      "related_terms": ["voltage", "current", "circuit", "semiconductor"],
-      "tags": ["electronics", "circuits", "power-electronics"],
-      "featured": true,
-      "home_featured": true,
-      "priority": 50,
-      "verified_date": "2026-05-29"
-    },
-    {
-      "id": "allaboutcircuits-textbook",
-      "card_kind": "resource",
-      "title": "All About Circuits Textbook",
-      "source": "All About Circuits",
-      "url": "https://www.allaboutcircuits.com/textbook/",
-      "type": "book",
-      "lang": "en",
-      "level": "intermediate",
-      "audience_level": "查资料",
-      "track": "electronics",
-      "category": "electronics",
-      "scope": "engineering-terms",
-      "foundation_module": "电子",
-      "summary": {
-        "zh": "电路概念查阅入口。适合在术语表里遇到 RC、RLC、晶体管、电源等词时回查。",
-        "en": "Circuit concept reference for RC, RLC, transistors, power and related topics."
-      },
-      "best_for": {
-        "zh": "已经看过工程视频，需要把某个电子概念查清楚的人。",
-        "en": "Learners who need a reference after seeing a circuit term in an engineering video."
-      },
-      "related_terms": ["rc-circuit", "rlc-circuit", "transistor", "power-supply"],
-      "tags": ["electronics", "reference", "circuits"],
-      "featured": true,
-      "home_featured": false,
-      "priority": 60,
-      "verified_date": "2026-05-29"
-    },
-    {
-      "id": "python-for-everybody",
-      "card_kind": "resource",
-      "title": "Python for Everybody",
-      "source": "Python for Everybody",
-      "url": "https://www.py4e.com/",
-      "type": "course",
-      "lang": "en",
-      "level": "beginner",
-      "audience_level": "补一个卡住的概念",
-      "track": "programming",
-      "category": "programming",
-      "scope": "engineering-terms",
-      "foundation_module": "编程",
-      "summary": {
-        "zh": "零基础 Python 入口。适合处理数据、脚本、字幕材料和简单实验，不作为转码主线。",
-        "en": "Python entry point for data handling, scripts, transcript work and small experiments."
-      },
-      "best_for": {
-        "zh": "想处理 CSV、字幕、传感器数据，或写一点自动化脚本的人。",
-        "en": "Learners who need Python for CSV files, transcripts, sensor data or automation scripts."
-      },
-      "related_terms": ["python", "data-processing", "script"],
-      "tags": ["programming", "python", "data"],
-      "featured": true,
-      "home_featured": false,
-      "priority": 70,
-      "verified_date": "2026-05-26"
-    },
-    {
-      "id": "learncpp",
-      "card_kind": "resource",
-      "title": "LearnCpp",
-      "source": "LearnCpp",
-      "url": "https://www.learncpp.com/",
-      "type": "tutorial",
-      "lang": "en",
-      "level": "beginner",
-      "audience_level": "补一个卡住的概念",
-      "track": "programming",
-      "category": "programming",
-      "scope": "engineering-terms",
-      "foundation_module": "编程",
-      "summary": {
-        "zh": "现代 C++ 系统教程。适合看嵌入式、机器人、控制和性能相关内容时补语言基础。",
-        "en": "Modern C++ tutorial for embedded, robotics, control and performance-oriented engineering."
-      },
-      "best_for": {
-        "zh": "看 MCU、固件、机器人控制、实时系统时，需要补 C++ 语法和编译概念的人。",
-        "en": "Learners who need C++ basics for MCU, firmware, robotics control or real-time systems."
-      },
-      "related_terms": ["cpp", "firmware", "embedded"],
-      "tags": ["programming", "cpp", "embedded"],
-      "featured": true,
-      "home_featured": false,
-      "priority": 80,
-      "verified_date": "2026-05-26"
-    },
-    {
-      "id": "mit-missing-semester",
-      "card_kind": "resource",
-      "title": "The Missing Semester of Your CS Education",
-      "source": "MIT",
-      "url": "https://missing.csail.mit.edu/",
-      "type": "course",
-      "lang": "en",
-      "level": "beginner",
-      "audience_level": "补一个卡住的概念",
-      "track": "programming",
-      "category": "programming",
-      "scope": "engineering-terms",
-      "foundation_module": "编程",
-      "summary": {
-        "zh": "命令行、Git、Shell、编辑器和调试工具链。用于维护术语地图和工程学习材料。",
-        "en": "Command line, Git, Shell, editors and debugging toolchain."
-      },
-      "best_for": {
-        "zh": "准备长期整理资源、写脚本、维护 Markdown/JSON，却还不熟命令行和 Git 的人。",
-        "en": "Learners maintaining Markdown/JSON resources and scripts without solid CLI or Git skills."
-      },
-      "related_terms": ["git", "shell", "debugging"],
-      "tags": ["toolchain", "git", "shell"],
-      "featured": true,
-      "home_featured": false,
-      "priority": 90,
-      "verified_date": "2026-05-26"
-    },
-    {
-      "id": "steve-brunton-fourier",
-      "card_kind": "resource",
-      "title": "Fourier Analysis Overview",
-      "source": "Steve Brunton",
-      "url": "https://www.youtube.com/watch?v=spUNpyF58BY",
-      "type": "video",
-      "lang": "en",
-      "level": "intermediate",
-      "audience_level": "看真实例子前准备一下",
-      "track": "signals-control",
-      "category": "signals-control",
-      "scope": "engineering-terms",
-      "foundation_module": "信号与控制",
-      "summary": {
-        "zh": "傅里叶分析直觉入口。先看懂时域、频域、频谱和滤波，不追求完整证明。",
-        "en": "Fourier analysis intuition for time domain, frequency domain, spectra and filtering."
-      },
-      "best_for": {
-        "zh": "看 FFT、滤波、振动、噪声、采样率和频谱时，需要补一层直觉的人。",
-        "en": "Learners who need Fourier intuition for FFT, filtering, vibration, noise and spectra."
-      },
-      "related_terms": ["fourier-transform", "fft", "frequency-domain", "filter"],
-      "tags": ["signals", "fourier", "fft"],
-      "featured": true,
-      "home_featured": true,
-      "priority": 100,
+      "priority": 301,
       "verified_date": "2026-05-29",
       "media": {
         "type": "youtube",
-        "youtube_video_id": "spUNpyF58BY",
-        "thumbnail_url": "https://img.youtube.com/vi/spUNpyF58BY/hqdefault.jpg"
+        "youtube_video_id": "UQZooauU-FQ",
+        "thumbnail_url": "https://img.youtube.com/vi/UQZooauU-FQ/hqdefault.jpg"
+      }
+    },
+    {
+      "id": "smartphone-manufacturing-china",
+      "card_kind": "resource",
+      "title": "How Smartphones Are Made in China",
+      "source": "YouTube",
+      "url": "https://www.youtube.com/watch?v=SF5Y2JovNPQ",
+      "type": "video",
+      "lang": "en",
+      "level": "beginner",
+      "audience_level": "先看懂大概",
+      "track": "manufacturing",
+      "category": "manufacturing",
+      "scope": "engineering-terms",
+      "foundation_module": "产业方向 / Manufacturing",
+      "summary": {
+        "zh": "手机制造现场入口。能直观看到 SMT、装配、测试和工厂流程。",
+        "en": "A visual entry point into smartphone manufacturing, SMT, assembly, testing and factory workflow."
+      },
+      "best_for": {
+        "zh": "想先看真实制造现场，再理解 PCB、SMT、测试和装配这些词的人。",
+        "en": "Learners who want a concrete factory context for PCB, SMT, testing and assembly terms."
+      },
+      "related_terms": ["smartphone", "smt", "pcb", "assembly", "testing"],
+      "tags": ["manufacturing", "smartphone", "smt", "reviewed-video"],
+      "featured": true,
+      "home_featured": true,
+      "priority": 501,
+      "verified_date": "2026-05-29",
+      "media": {
+        "type": "youtube",
+        "youtube_video_id": "SF5Y2JovNPQ",
+        "thumbnail_url": "https://img.youtube.com/vi/SF5Y2JovNPQ/hqdefault.jpg"
       }
     }
   ]
 }
-
-

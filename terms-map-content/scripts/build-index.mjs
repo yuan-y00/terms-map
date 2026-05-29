@@ -558,7 +558,29 @@ function build() {
 
   // 11b. Resource contract checks
   const resourceErrors = [];
-  const allowedResourceTracks = new Set(['math', 'physics', 'electronics', 'programming', 'signals-control']);
+  const allowedResourceTracks = new Set([
+    'automation',
+    'semiconductor-equipment',
+    'robotics',
+    'energy',
+    'manufacturing',
+    'cpp',
+    'python',
+    'linux',
+    'git',
+    'plc',
+    'microcontrollers',
+    'sensors',
+    'math',
+    'physics',
+    'circuits',
+    'programming',
+    'control',
+    'measurement',
+    // Keep legacy tracks valid while older docs/resources are being migrated.
+    'electronics',
+    'signals-control',
+  ]);
   const resources = dataFiles['resources.json'] && Array.isArray(dataFiles['resources.json'].items)
     ? dataFiles['resources.json'].items
     : [];

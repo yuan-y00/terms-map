@@ -141,7 +141,7 @@ var ResourceCards = (function () {
     }
 
     return {
-      tracks: Object.keys(tracks).sort(),
+      tracks: sortTracks(Object.keys(tracks)),
       types: Object.keys(types).sort(),
       levels: Object.keys(levels).sort(),
       langs: Object.keys(langs).sort()
@@ -193,6 +193,38 @@ var ResourceCards = (function () {
    * ========================================================================== */
 
   var AUDIENCE_ORDER = ["先看懂大概", "补一个卡住的概念", "看真实例子前准备一下", "查资料", "查阅型资料"];
+
+  var TRACK_ORDER = {
+    "automation": 10,
+    "semiconductor-equipment": 20,
+    "robotics": 30,
+    "energy": 40,
+    "manufacturing": 50,
+    "cpp": 110,
+    "python": 120,
+    "linux": 130,
+    "git": 140,
+    "plc": 150,
+    "microcontrollers": 160,
+    "sensors": 170,
+    "math": 210,
+    "physics": 220,
+    "circuits": 230,
+    "programming": 240,
+    "control": 250,
+    "measurement": 260,
+    "electronics": 231,
+    "signals-control": 251
+  };
+
+  function sortTracks(trackIds) {
+    return trackIds.sort(function (a, b) {
+      var oa = TRACK_ORDER[a] != null ? TRACK_ORDER[a] : 999;
+      var ob = TRACK_ORDER[b] != null ? TRACK_ORDER[b] : 999;
+      if (oa !== ob) return oa - ob;
+      return a.localeCompare(b);
+    });
+  }
 
   var LANG_ORDER = { "en": 0, "de": 1, "zh": 2, "multi": 3 };
 
@@ -401,10 +433,25 @@ var ResourceCards = (function () {
 
   function renderFilterBar(filters, available) {
     var trackNames = {
+      "automation": "Automation",
+      "semiconductor-equipment": "Semiconductor Equipment",
+      "robotics": "Robotics",
+      "energy": "Energy",
+      "manufacturing": "Manufacturing",
+      "cpp": "C++",
+      "python": "Python",
+      "linux": "Linux",
+      "git": "Git",
+      "plc": "PLC",
+      "microcontrollers": "Microcontrollers",
+      "sensors": "Sensors",
       "math": "Math",
       "physics": "Physics",
-      "electronics": "Electronics",
+      "circuits": "Circuits",
       "programming": "Programming",
+      "control": "Control",
+      "measurement": "Measurement",
+      "electronics": "Electronics",
       "signals-control": "Signals & Control"
     };
 
