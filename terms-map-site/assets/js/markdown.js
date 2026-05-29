@@ -194,6 +194,12 @@ var MarkdownRenderer = (function () {
 
       var firstLine = block.split("\n")[0].trim();
 
+      /* Trusted local component: engineering terms overview cards */
+      if (/^<section\s+class="terms-overview"/.test(firstLine)) {
+        html += block + "\n";
+        continue;
+      }
+
       /* Heading */
       var hMatch = firstLine.match(/^(#{1,4})\s+(.+)$/);
       if (hMatch && block.indexOf("\n") === -1) {

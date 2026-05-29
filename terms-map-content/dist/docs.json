@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-05-29T11:47:17.067Z",
+  "generatedAt": "2026-05-29T11:58:26.145Z",
   "stats": {
     "total": 2,
     "byLang": {
@@ -108,8 +108,8 @@
           "slug": "半导体、制造与维修"
         }
       ],
-      "wordCount": 870,
-      "readingTime": 4
+      "wordCount": 974,
+      "readingTime": 5
     }
   ]
 }

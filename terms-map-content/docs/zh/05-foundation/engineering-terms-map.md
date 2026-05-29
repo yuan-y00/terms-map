@@ -12,7 +12,41 @@ order: 6
 
 你在装机、维修、视频、项目、设备说明或日常使用里遇到一个词，往往不是只差一个翻译，而是它背后牵出一整块知识。
 
-![现代工程术语地图](./engineering-terms-overview-clean.svg)
+<section class="terms-overview" aria-label="工程术语方向卡片">
+<div class="terms-overview-grid">
+<article class="terms-overview-card terms-overview-card-accent">
+<div class="terms-overview-meta"><span>01</span><span>电机 / 电源</span></div>
+<h3>电怎么转换和驱动</h3>
+<p class="terms-overview-terms">BLDC · FOC · ESC · PWM</p>
+<p>电压电流、电磁、转动、反馈控制</p>
+</article>
+<article class="terms-overview-card terms-overview-card-primary">
+<div class="terms-overview-meta"><span>02</span><span>电路 / 信号</span></div>
+<h3>信号怎么流，接口怎么工作</h3>
+<p class="terms-overview-terms">PCB · RC · Signal · Noise</p>
+<p>滤波、采样、频率、接口保护</p>
+</article>
+<article class="terms-overview-card terms-overview-card-positive">
+<div class="terms-overview-meta"><span>03</span><span>GPU / AI 硬件</span></div>
+<h3>芯片为什么能并行计算</h3>
+<p class="terms-overview-terms">GPU · CUDA · Tensor Core</p>
+<p>矩阵、显存、总线、芯片结构</p>
+</article>
+<article class="terms-overview-card terms-overview-card-neutral">
+<div class="terms-overview-meta"><span>04</span><span>机器人 / 自动化</span></div>
+<h3>代码怎么进入真实世界</h3>
+<p class="terms-overview-terms">MCU · Firmware · RTOS · Sensor · Actuator · PLC</p>
+<p>传感器、执行器、实时控制、机器运动</p>
+</article>
+<article class="terms-overview-card terms-overview-card-muted">
+<div class="terms-overview-meta"><span>05</span><span>半导体 / 制造</span></div>
+<h3>芯片和产品怎么被做出来</h3>
+<p class="terms-overview-terms">Wafer · Lithography · Etching · Packaging · SMT</p>
+<p>芯片制造、焊接、测试、故障定位、设备维护</p>
+</article>
+</div>
+<div class="terms-overview-foundation"><strong>基础学科</strong><span>数学：三角函数、微积分、线性代数、傅里叶、概率</span><span>物理：力学、电磁、热、波</span><span>电子：RC/RL、晶体管、电源、电路板</span><span>编程</span></div>
+</section>
 
 ## 电机、电源与控制
 
