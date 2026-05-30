@@ -359,6 +359,20 @@
               "排查 fd 泄漏：ls -l /proc/<pid>/fd、ls /proc/<pid>/fd | wc -l、grep 'Max open files' /proc/<pid>/limits、lsof。",
               "fd 一直涨通常是文件、socket、HTTP response body 或日志句柄没关闭。"
             ]
+          },
+          {
+            "heading": "Block Devices and Disk I/O",
+            "body": "这节解释“磁盘慢”到底慢在哪一层。一次 read/write 会经过应用、system call、VFS、文件系统、page cache、block layer、I/O scheduler、驱动和硬件；排查时不能只说磁盘慢，要定位是哪一层慢。",
+            "points": [
+              "block device 是可按块寻址的存储，比如 /dev/sda、/dev/nvme0n1、LVM volume；character device 是字节流，比如 /dev/null、串口、终端。",
+              "Page cache 会把文件数据缓存到 RAM；第二次读大文件很快，可能是读内存，不是读磁盘。",
+              "默认写入通常先写 page cache 并标记 Dirty，内核稍后异步刷盘；fsync/fdatasync 才是保证数据真正落盘的契约。",
+              "iostat -x 1 是生产排查常用工具，重点看 r/s、w/s、rkB/s、wkB/s、r_await、w_await、aqu-sz；现代 NVMe 上不要迷信 %util。",
+              "iowait 不是磁盘使用率，而是 CPU 因等待 I/O 而空闲的时间；它只能说明 I/O 可能参与了问题。",
+              "fio 用来测设备上限，记得用 --direct=1，否则很可能测到的是 page cache，不是真实硬盘。",
+              "常见判断：await 上升且队列堆积可能是设备或云盘 IOPS 打满；load 高但 CPU 不高可能是一堆 D 状态进程卡 I/O；df -h 有空间但 no space left 要查 df -i。",
+              "排查链：pidstat/iotop//proc/<pid>/io 看进程 I/O，iostat 看设备 I/O，df -h/df -i 看空间和 inode，dmesg/smartctl 看硬件和内核错误。"
+            ]
           }
         ]
       },
