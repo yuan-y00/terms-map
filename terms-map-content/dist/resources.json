@@ -186,6 +186,49 @@
         "youtube_video_id": "SF5Y2JovNPQ",
         "thumbnail_url": "https://img.youtube.com/vi/SF5Y2JovNPQ/hqdefault.jpg"
       }
+    },
+    {
+      "id": "devopsbeast-prompt-economics",
+      "card_kind": "resource",
+      "title": "Prompt Economics: Token Cost Engineering for Production LLM Systems",
+      "source": "DevOpsBeast",
+      "url": "https://devopsbeast.com/blog/prompt-economics-token-cost-engineering",
+      "type": "article",
+      "lang": "en",
+      "level": "intermediate",
+      "audience_level": "AI engineering practice",
+      "track": "python",
+      "category": "python",
+      "scope": "engineering-terms",
+      "foundation_module": "工程技能 / Python / Linux / AI Engineering Practice",
+      "summary": {
+        "zh": "用生产系统的视角解释 token 成本、prompt caching、输出长度控制、RAG 上下文裁剪和模型路由，适合把 AI 工具从会用推进到会算账、会优化。",
+        "en": "A production-oriented guide to token cost, prompt caching, output control, RAG context pruning and model routing."
+      },
+      "best_for": {
+        "zh": "已经会用 AI 写脚本或做问答系统，想理解为什么账单会涨、上下文该怎么控、工程上该先优化哪里的学习者。",
+        "en": "Learners who already use AI for scripts or Q&A systems and want to understand cost, context and production optimization."
+      },
+      "related_terms": [
+        "token",
+        "prompt-caching",
+        "rag",
+        "context-window",
+        "model-routing",
+        "llm-ops"
+      ],
+      "tags": [
+        "python",
+        "linux",
+        "ai-engineering",
+        "llm-ops",
+        "cost-engineering",
+        "article"
+      ],
+      "featured": false,
+      "home_featured": false,
+      "priority": 124,
+      "verified_date": "2026-05-30"
     }
   ]
 }
