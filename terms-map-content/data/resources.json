@@ -237,6 +237,18 @@
               "switch_root 之后 systemd 成为 PID 1，开始并行拉起网络、日志、SSH 和服务；启动慢通常用 systemd-analyze blame 查。",
               "启动问题先判断卡在哪一层，再决定看 BIOS/UEFI、GRUB、dmesg、journalctl -b 还是 systemd-analyze。"
             ]
+          },
+          {
+            "heading": "Anatomy of a Process",
+            "body": "进程不是一个黑盒程序，而是 kernel 管理的一组身份、内存、文件、状态、权限和父子关系。你看到一个程序在跑，本质上是在看一个 PID 对应的系统对象。",
+            "points": [
+              "一个进程有 PID、PPID、UID、GID，也有自己的虚拟内存、打开的文件、socket、pipe 和信号状态。",
+              "Shell 执行命令通常是 fork() 复制出子进程，再 execve() 把子进程换成真正的程序，最后父进程 wait() 回收它。",
+              "ps 里的状态很重要：R 是运行/等 CPU，S 是睡眠，D 是不可中断 I/O，T 是暂停，Z 是僵尸进程。",
+              "D 状态通常 kill -9 也杀不掉，因为它卡在内核 I/O；Z 状态不是还活着，而是已经退出但父进程没回收。",
+              "VSZ/VSS 是虚拟地址空间，不等于真实内存；RSS 是当前在物理内存里的大小，PSS 更适合估算共享内存后的真实成本。",
+              "常用观察工具：ps auxf、pstree -p、top/htop、pgrep -lf、cat /proc/<pid>/status、ls /proc/<pid>/fd。"
+            ]
           }
         ]
       },
