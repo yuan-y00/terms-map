@@ -1864,6 +1864,119 @@ mark, .search-result-title mark, .search-result-snippet mark {
   margin-top: auto;
 }
 
+.home-card-actions,
+.resource-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+  flex-wrap: wrap;
+  margin-top: auto;
+}
+
+.home-card-actions .resource-direct-link,
+.resource-card-actions .resource-direct-link {
+  margin-top: 0;
+}
+
+.resource-note-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-accent);
+  padding: 0.48em 0.82em;
+  font: inherit;
+  font-size: var(--font-size-sm);
+  font-weight: 800;
+  line-height: 1.2;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+}
+
+.resource-note-link:hover {
+  border-color: var(--color-accent);
+  background: var(--color-primary-bg);
+}
+
+.resource-note-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 1.2em;
+}
+
+.resource-note-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(22, 24, 31, 0.42);
+}
+
+.resource-note-panel {
+  position: relative;
+  width: min(760px, 100%);
+  max-height: min(760px, 86vh);
+  overflow: auto;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 1.4em 1.5em;
+}
+
+.resource-note-close {
+  position: absolute;
+  top: 0.75em;
+  right: 0.75em;
+  width: 2em;
+  height: 2em;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 1.1em;
+  cursor: pointer;
+}
+
+.resource-note-panel h2 {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 900;
+  margin: 0 2em 0.75em 0;
+  color: var(--color-accent);
+}
+
+.resource-note-section {
+  border-top: 1px solid var(--color-border-light);
+  padding-top: 0.95em;
+  margin-top: 0.95em;
+}
+
+.resource-note-section:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.resource-note-section h3 {
+  font-size: 17px;
+  font-weight: 800;
+  margin: 0 0 0.45em;
+}
+
+.resource-note-section p,
+.resource-note-section li {
+  color: var(--color-text-secondary);
+  line-height: 1.65;
+}
+
+.resource-note-section ul {
+  margin: 0.45em 0 0;
+  padding-left: 1.2em;
+}
+
 /* ── Resource Group Link Cards ── */
 .home-group-links {
   display: grid;

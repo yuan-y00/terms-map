@@ -98,6 +98,7 @@ var ResourceCards = (function () {
       priority: typeof item.priority === "number" ? item.priority : 99,
       verified_date: item.verified_date || null,
       note: item.note || "",
+      notes: item.notes || null,
       year: item.year || null,
       media: media
     };
@@ -359,7 +360,11 @@ var ResourceCards = (function () {
     }
 
     /* Footer: verified date + direct link */
-    if (!hasUrl) {
+    if (item.notes) {
+      h += '<div class="resource-card-actions">';
+      h += renderNoteButton(item, lang);
+      h += '</div>';
+    } else if (!hasUrl) {
       h += '<div class="resource-card-footer">';
       h += '<span class="resource-direct-link disabled">' + esc(t("pending_verify")) + '</span>';
       h += '</div>';
@@ -688,9 +693,18 @@ var ResourceCards = (function () {
     if (sum) {
       h += '<p class="home-card-summary">' + esc(sum) + '</p>';
     }
+    if (hasUrl || item.notes) {
+      h += '<div class="home-card-actions">';
+    }
     if (hasUrl) {
       h += '<a class="resource-direct-link" href="' + attr(item.url) +
         '" target="_blank" rel="noreferrer noopener">' + esc(t("direct_link")) + '</a>';
+    }
+    if (item.notes) {
+      h += renderNoteButton(item, lang);
+    }
+    if (hasUrl || item.notes) {
+      h += '</div>';
     }
     h += '</div></article>';
     return h;
@@ -879,6 +893,14 @@ var ResourceCards = (function () {
     if (!safeUrl(item.url)) return "";
     return '<a class="resource-direct-link" href="' + attr(item.url) +
       '" target="_blank" rel="noreferrer noopener">' + esc(t("direct_link")) + '</a>';
+  }
+
+  function renderNoteButton(item, lang) {
+    if (!item.notes) return "";
+    var payload = encodeURIComponent(JSON.stringify(item.notes));
+    var label = lang === "en" ? "Notes" : "理解笔记";
+    return '<button class="resource-note-link" type="button" data-resource-note="' +
+      attr(payload) + '">' + esc(label) + '</button>';
   }
 
   /* ==========================================================================

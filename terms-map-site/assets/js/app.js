@@ -1058,6 +1058,66 @@ const App = (() => {
     }
   }
 
+  function bindResourceNoteClicks() {
+    document.addEventListener("click", function (e) {
+      var trigger = e.target.closest ? e.target.closest("[data-resource-note]") : null;
+      if (!trigger) return;
+      e.preventDefault();
+
+      var raw = trigger.getAttribute("data-resource-note") || "";
+      var note = null;
+      try {
+        note = JSON.parse(decodeURIComponent(raw));
+      } catch (err) {
+        return;
+      }
+      showResourceNote(note);
+    });
+  }
+
+  function showResourceNote(note) {
+    var old = document.querySelector(".resource-note-modal");
+    if (old && old.parentNode) old.parentNode.removeChild(old);
+
+    var title = note.title || "理解笔记";
+    var sections = Array.isArray(note.sections) ? note.sections : [];
+    var html = '<div class="resource-note-modal" role="dialog" aria-modal="true">' +
+      '<div class="resource-note-backdrop" data-note-close></div>' +
+      '<div class="resource-note-panel">' +
+        '<button class="resource-note-close" type="button" data-note-close aria-label="Close">×</button>' +
+        '<h2>' + esc(title) + '</h2>';
+
+    for (var i = 0; i < sections.length; i++) {
+      var section = sections[i];
+      html += '<section class="resource-note-section">';
+      if (section.heading) {
+        html += '<h3>' + esc(section.heading) + '</h3>';
+      }
+      if (section.body) {
+        html += '<p>' + esc(section.body) + '</p>';
+      }
+      if (Array.isArray(section.points) && section.points.length) {
+        html += '<ul>';
+        for (var j = 0; j < section.points.length; j++) {
+          html += '<li>' + esc(section.points[j]) + '</li>';
+        }
+        html += '</ul>';
+      }
+      html += '</section>';
+    }
+
+    html += '</div></div>';
+    document.body.insertAdjacentHTML("beforeend", html);
+
+    var modal = document.querySelector(".resource-note-modal");
+    var closers = modal ? modal.querySelectorAll("[data-note-close]") : [];
+    for (var k = 0; k < closers.length; k++) {
+      closers[k].addEventListener("click", function () {
+        if (modal && modal.parentNode) modal.parentNode.removeChild(modal);
+      });
+    }
+  }
+
   /* ------------------------------------------------------------------------
    * Layout helpers — show/hide sidebar and TOC per route
    * ------------------------------------------------------------------------ */
@@ -1261,6 +1321,7 @@ const App = (() => {
 
       /* Bind search form */
       bindSearchForm();
+      bindResourceNoteClicks();
 
       /* Listen for hash changes */
       window.addEventListener("hashchange", function () {

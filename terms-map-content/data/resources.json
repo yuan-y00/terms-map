@@ -193,6 +193,41 @@
         "zh": "适合会一点 cd、ls、mkdir，但一遇到权限、端口、服务启动失败、环境变量就不知道从哪查的人。",
         "en": "Learners who know basic commands and want a working model for debugging services, environments and production systems."
       },
+      "notes": {
+        "title": "Linux Fundamentals for Engineers 理解笔记",
+        "sections": [
+          {
+            "heading": "这门课到底在讲什么",
+            "body": "它不是 Linux 命令大全，而是在帮你建立一张系统地图：代码如何变成进程，进程如何读写文件和网络，服务为什么能后台运行，出问题时应该从日志、权限、端口、进程还是资源限制查起。",
+            "points": [
+              "适合从“照着教程敲命令”升级到“能自己排查问题”。",
+              "重点不是背命令，而是知道每个命令背后在观察系统的哪一层。",
+              "以后做 Python、C++、机器人、服务器、Docker、AI 部署都会用到这套模型。"
+            ]
+          },
+          {
+            "heading": "The Kernel, Userspace, and System Calls",
+            "body": "Linux 把系统分成两层：普通程序运行在 userspace，真正管理 CPU、内存、文件、磁盘、网卡和设备的是 kernel。普通程序不能直接控制硬件，必须通过 system call 请求内核帮忙。",
+            "points": [
+              "Python 的 open、C++ 的文件读写、Shell 的 ls，底层都会变成系统调用。",
+              "Permission denied 是内核检查权限后拒绝了请求，不是程序“玄学坏了”。",
+              "Port already in use 是内核里的网络端口已经被别的进程占用。",
+              "Segmentation fault 是程序访问了不该访问的内存，内核直接终止它。"
+            ]
+          },
+          {
+            "heading": "Everything Is a File (Really)",
+            "body": "Linux 里的“文件”不是只指 txt、pdf 这种磁盘文件，而是一种统一接口。很多资源都可以通过 open、read、write、close 这套方式访问，所以终端、设备、进程信息、管道、socket、内核状态都可能像文件一样出现在文件系统里。",
+            "points": [
+              "/dev 下面常常是设备入口，比如终端、随机数、磁盘、串口。",
+              "/proc 是内核和进程状态的窗口，比如 CPU、内存、某个进程打开了什么。",
+              "/sys 更像设备和驱动的控制面板，可以观察硬件状态，有些还能写入配置。",
+              "ls -l 第一列很重要：- 是普通文件，d 是目录，l 是链接，c/b 是设备，p 是管道，s 是 socket。",
+              "遇到路径相关问题时，先判断它到底是什么类型，再决定用 cat、echo、lsof、/proc 还是 socket 工具。"
+            ]
+          }
+        ]
+      },
       "related_terms": ["linux", "kernel", "process", "syscall", "systemd", "cgroups", "namespaces"],
       "tags": ["linux", "devops", "systems", "engineering-skills", "course"],
       "featured": true,
