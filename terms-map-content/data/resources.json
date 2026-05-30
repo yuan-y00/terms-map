@@ -186,11 +186,11 @@
       "scope": "engineering-terms",
       "foundation_module": "工程技能 / Linux",
       "summary": {
-        "zh": "从 kernel、process、syscall、文件系统、systemd、cgroups 和 namespaces 建立 Linux 的工程底层模型，比普通命令速查更适合长期使用。",
+        "zh": "帮你把 Linux 从“会敲命令”变成“知道程序、文件、进程、服务和权限是怎么跑起来的”。适合以后调环境、看日志、排查服务器问题。",
         "en": "A systems-oriented Linux course covering kernel/userspace, processes, syscalls, filesystems, systemd, cgroups and namespaces."
       },
       "best_for": {
-        "zh": "已经会敲基础命令，但想理解 Linux 为什么这样工作、以后能排查服务和环境问题的学习者。",
+        "zh": "适合会一点 cd、ls、mkdir，但一遇到权限、端口、服务启动失败、环境变量就不知道从哪查的人。",
         "en": "Learners who know basic commands and want a working model for debugging services, environments and production systems."
       },
       "related_terms": ["linux", "kernel", "process", "syscall", "systemd", "cgroups", "namespaces"],
@@ -215,11 +215,11 @@
       "scope": "engineering-terms",
       "foundation_module": "工程技能 / Git",
       "summary": {
-        "zh": "把 Git 当成内容寻址文件系统来理解，覆盖 objects、refs、reflog、reset、rebase、bisect、blame 和团队协作里的排错。",
+        "zh": "不是只教 git add、commit、push，而是帮你看懂 Git 到底怎么保存版本。适合解决回滚、分支混乱、冲突、找错提交这些真实问题。",
         "en": "A Git course that explains objects, refs, reflog, reset, rebase, bisect, blame and collaboration from Git's internal model."
       },
       "best_for": {
-        "zh": "不想只背 git add/commit/push，而是想在冲突、回滚、历史排查和协作里真正用得稳的学习者。",
+        "zh": "适合已经会提交代码，但不敢 rebase、不敢 reset、合并冲突时心里没底的人。",
         "en": "Learners who want to handle conflicts, rollback, history debugging and collaboration instead of memorizing basic commands."
       },
       "related_terms": ["git", "commit", "branch", "reflog", "rebase", "bisect", "merge"],
