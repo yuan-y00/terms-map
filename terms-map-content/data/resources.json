@@ -287,6 +287,19 @@
               "不同进程可能在不同 mount namespace 里，所以同一个 /etc/hosts、/var/cache/app 对不同进程可能不是同一个东西。",
               "排查顺序：findmnt /path、df -h /path、df -i /path、cat /proc/<pid>/mountinfo、ls -l /proc/<pid>/ns/mnt。"
             ]
+          },
+          {
+            "heading": "File Descriptors, Pipes, and Redirection",
+            "body": "文件描述符 fd 是进程内部的小号码牌，指向某个打开的东西：文件、终端、socket、pipe、设备都可以。Shell 的重定向和管道，本质是在程序启动前重新接线。",
+            "points": [
+              "每个进程默认有 0 stdin、1 stdout、2 stderr；正常输出走 stdout，错误走 stderr，所以管道默认只接 stdout。",
+              "cmd > file 2>&1 的顺序很重要：先把 stdout 指向文件，再让 stderr 指向当前 stdout；反过来写会让 stderr 继续留在终端。",
+              "管道 | 是 kernel 创建的内存缓冲区，左边进程写入 pipe，右边进程读取 pipe；读得慢会反压写的一边。",
+              "cmd |& tee log.txt 很实用：stdout 和 stderr 都进管道，同时显示在屏幕并保存到文件。",
+              "sudo echo 1 > /etc/file 可能失败，因为 > 是当前 shell 做的，不是 sudo；正确方式常用 echo 1 | sudo tee /etc/file。",
+              "排查 fd 泄漏：ls -l /proc/<pid>/fd、ls /proc/<pid>/fd | wc -l、grep 'Max open files' /proc/<pid>/limits、lsof。",
+              "fd 一直涨通常是文件、socket、HTTP response body 或日志句柄没关闭。"
+            ]
           }
         ]
       },
