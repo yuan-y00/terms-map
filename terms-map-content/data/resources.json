@@ -261,6 +261,19 @@
               "容器里的 PID 1 很特殊；Dockerfile 要优先用 exec form：CMD [\"python\", \"app.py\"]，不要写成 CMD python app.py。",
               "退出码 137 通常是 SIGKILL，常见于 OOMKilled 或优雅关闭超时；143 通常是 SIGTERM，139 是 SIGSEGV 段错误。"
             ]
+          },
+          {
+            "heading": "Reading /proc for Debugging",
+            "body": "/proc 是 kernel 提供的实时系统状态面板。每个运行中的进程都有 /proc/<pid>/，里面能看到它怎么启动、现在是什么状态、打开了哪些文件、卡在哪个 syscall、用了多少内存、属于哪个 cgroup 和 namespace。",
+            "points": [
+              "cat /proc/<pid>/cmdline | tr '\\0' ' ' 能看进程真实启动命令；cat /proc/<pid>/status 能看状态、父进程、用户、内存、线程数和信号处理。",
+              "wchan 和 syscall 是判断进程卡在哪里的关键：futex 多半是等锁，epoll_wait 可能只是事件循环空等，read/recvfrom 是等 I/O。",
+              "/proc/<pid>/task/ 可以逐个看线程；如果很多线程都在 futex，一个线程在跑，通常要查那个持锁线程。",
+              "ls -l /proc/<pid>/fd 能看所有打开的文件、socket、pipe；配合 /proc/<pid>/limits 可以发现文件描述符泄漏。",
+              "maps 和 smaps 用来看内存布局和真实内存成本，PSS 比简单相加 RSS 更适合共享库和多进程服务。",
+              "cgroup 和 ns 能判断进程属于哪个容器、看到哪个文件系统/网络/进程空间。",
+              "如果日志或二进制被删但进程还打开着，可以从 /proc/<pid>/fd 或 /proc/<pid>/exe 恢复。"
+            ]
           }
         ]
       },
