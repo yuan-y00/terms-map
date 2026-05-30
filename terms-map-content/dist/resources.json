@@ -284,6 +284,18 @@
               "ls -l 第一列很重要：- 是普通文件，d 是目录，l 是链接，c/b 是设备，p 是管道，s 是 socket。",
               "遇到路径相关问题时，先判断它到底是什么类型，再决定用 cat、echo、lsof、/proc 还是 socket 工具。"
             ]
+          },
+          {
+            "heading": "The Boot Sequence",
+            "body": "Linux 启动不是一下子完成，而是一层一层交接控制权：Firmware → Bootloader → Kernel → initramfs → switch_root → systemd → Login。每一层失败时，能用的工具和能看到的日志都不一样。",
+            "points": [
+              "Firmware/UEFI 先检查硬件并寻找可启动设备；这里失败通常是黑屏、找不到硬盘或 No bootable device。",
+              "Bootloader 负责把 vmlinuz、initramfs 和 kernel parameters 装进内存；/proc/cmdline 能看到这次启动参数。",
+              "Kernel 初始化 CPU、内存、驱动和设备；硬件、驱动、PCIe、磁盘错误通常先看 dmesg。",
+              "initramfs 是临时小系统，用来找到真正的根文件系统；卡在 (initramfs) 往往和磁盘、LVM、LUKS、UUID 或驱动有关。",
+              "switch_root 之后 systemd 成为 PID 1，开始并行拉起网络、日志、SSH 和服务；启动慢通常用 systemd-analyze blame 查。",
+              "启动问题先判断卡在哪一层，再决定看 BIOS/UEFI、GRUB、dmesg、journalctl -b 还是 systemd-analyze。"
+            ]
           }
         ]
       },
