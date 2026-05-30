@@ -308,6 +308,18 @@
               "VSZ/VSS 是虚拟地址空间，不等于真实内存；RSS 是当前在物理内存里的大小，PSS 更适合估算共享内存后的真实成本。",
               "常用观察工具：ps auxf、pstree -p、top/htop、pgrep -lf、cat /proc/<pid>/status、ls /proc/<pid>/fd。"
             ]
+          },
+          {
+            "heading": "Signals and Process Control",
+            "body": "信号是 Linux 控制进程生命周期的最小机制。它不是消息队列，而是内核递给进程的事件通知：请退出、强制杀掉、暂停、继续、子进程退出、内存访问错误等。",
+            "points": [
+              "SIGTERM 是礼貌退出，服务停止、Docker stop、Kubernetes pod 终止通常先发它；程序应该捕获它并清理资源。",
+              "SIGKILL 是强杀，程序不能捕获、不能忽略，也没有机会 flush 缓冲、关闭连接或释放锁；不要一上来 kill -9。",
+              "SIGINT 来自 Ctrl-C，SIGTSTP 来自 Ctrl-Z，SIGCONT 让暂停的进程继续运行。",
+              "Kubernetes 的常见停止流程是 SIGTERM → 等待 terminationGracePeriodSeconds → 还没退出就 SIGKILL。",
+              "容器里的 PID 1 很特殊；Dockerfile 要优先用 exec form：CMD [\"python\", \"app.py\"]，不要写成 CMD python app.py。",
+              "退出码 137 通常是 SIGKILL，常见于 OOMKilled 或优雅关闭超时；143 通常是 SIGTERM，139 是 SIGSEGV 段错误。"
+            ]
           }
         ]
       },
