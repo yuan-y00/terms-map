@@ -346,6 +346,71 @@
         "zh": "适合已经会提交代码，但不敢 rebase、不敢 reset、合并冲突时心里没底的人。",
         "en": "Learners who want to handle conflicts, rollback, history debugging and collaboration instead of memorizing basic commands."
       },
+      "notes": {
+        "title": "Git Internals for Engineers 理解笔记",
+        "sections": [
+          {
+            "heading": "这门课到底在讲什么",
+            "body": "它不是教你背 git add、commit、push，而是解释 Git 到底怎么保存代码历史，以及出错后怎么把东西救回来。真正目标是让你从“会提交代码”升级到“能在团队项目里安全处理历史、分支、冲突和恢复”。",
+            "points": [
+              "很多人会提交代码，但一遇到 detached HEAD、merge conflict、rebase 失败、reset --hard、force push 就慌。",
+              "这门课把 Git 讲成一套对象、指针和历史图，而不是一堆零散命令。",
+              "适合已经会基本提交，但想真正理解 Git 底层模型和团队协作排错的人。"
+            ]
+          },
+          {
+            "heading": "Git 是内容寻址文件系统",
+            "body": "Git 的核心不是保存“改了哪些行”，而是保存对象。文件内容是 blob，目录结构是 tree，一次版本是 commit，分支名是 ref，HEAD 表示你当前站在哪里。",
+            "points": [
+              "blob 保存文件内容；tree 保存文件夹结构；commit 保存一次快照、作者、时间和父提交。",
+              "分支不是复制出一整份代码，而是一个很轻的指针，指向某个 commit。",
+              "切分支本质上是移动 HEAD，让工作区变成另一个 commit 对应的状态。",
+              "理解 blob、tree、commit、ref、HEAD 后，分支和 detached HEAD 就不再神秘。"
+            ]
+          },
+          {
+            "heading": "Working、Staging、Repository 三层",
+            "body": "Git 工作流有三层：working tree 是你当前文件夹里的文件，staging area 是下一次 commit 准备保存的内容，repository 是 .git 里已经保存下来的历史。",
+            "points": [
+              "git add 不是上传，而是把当前文件内容放进 staging area。",
+              "git commit 是把 staging area 里的内容做成一个新的 commit。",
+              "如果你改了文件但没 git add，commit 里不会包含这次修改。",
+              "git status 的很多提示，本质上是在告诉你文件处于这三层里的哪一层。"
+            ]
+          },
+          {
+            "heading": "Merge、Rebase、Fast-forward",
+            "body": "fast-forward 是目标分支没有分叉，直接把指针往前挪；merge commit 是保留两个分支的真实汇合点；rebase 是把你的提交搬到另一个分支最新位置后面重新播放。",
+            "points": [
+              "想保留真实协作历史时用 merge。",
+              "想让自己的功能分支历史更干净时用 rebase。",
+              "公共分支上不要随便 rebase，因为它会改写别人可能已经基于它工作的历史。",
+              "冲突不是 Git 故意为难你，而是两个历史分支改到了同一段内容，Git 无法自动判断谁对。"
+            ]
+          },
+          {
+            "heading": "Reflog 和 Reset 是救命工具",
+            "body": "Git 很少立刻真正丢数据。reflog 会记录 HEAD 曾经去过哪里，所以 reset、rebase、切分支搞乱后，第一反应应该是看 git reflog。",
+            "points": [
+              "git reflog 能找回 reset、rebase、误切分支后看似消失的 commit。",
+              "git reset --soft：只移动 HEAD，保留暂存区和工作区，适合后悔 commit。",
+              "git reset --mixed：移动 HEAD，清空暂存区，保留工作区，适合后悔 add。",
+              "git reset --hard：HEAD、暂存区、工作区都回到目标状态，风险最大，执行前要确认没有未保存修改。",
+              "找回提交的常见做法：git reflog 找 hash，再 git branch rescue <hash>。"
+            ]
+          },
+          {
+            "heading": "Git 也能用来 Debug",
+            "body": "Git 不只是版本管理工具，也能用来追查 bug 来源。blame、bisect、log -S 这些命令能把“哪里坏了”变成“哪次提交引入的”。",
+            "points": [
+              "git blame 能看某一行是谁、什么时候改的，但不要用来甩锅，更适合找上下文。",
+              "git bisect 用二分法定位哪个 commit 引入了 bug，适合历史很长、手动排查很慢的项目。",
+              "git log -S keyword 能找某段代码、函数名或字符串是哪次提交加入或删除的。",
+              "团队项目里，能用 Git 追查历史是从初级开发走向中级开发的重要能力。"
+            ]
+          }
+        ]
+      },
       "related_terms": ["git", "commit", "branch", "reflog", "rebase", "bisect", "merge"],
       "tags": ["git", "version-control", "engineering-skills", "course"],
       "featured": true,
