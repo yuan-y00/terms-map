@@ -274,6 +274,19 @@
               "cgroup 和 ns 能判断进程属于哪个容器、看到哪个文件系统/网络/进程空间。",
               "如果日志或二进制被删但进程还打开着，可以从 /proc/<pid>/fd 或 /proc/<pid>/exe 恢复。"
             ]
+          },
+          {
+            "heading": "Filesystem Hierarchy and Mounts",
+            "body": "Linux 只有一棵从 / 开始的目录树，但这棵树由很多挂载拼起来：真实磁盘、tmpfs、procfs、sysfs、Docker volume、Kubernetes ConfigMap、overlay 层都可能挂在某个路径上。",
+            "points": [
+              "mount 会把一个来源接到一个目录上；挂载后，原目录内容会被遮住，直到 umount。",
+              "路径存在但行为奇怪时，先查 findmnt /path；问题可能是 ro/rw、noexec、nosuid、nodev、网络挂载、空间或 inode。",
+              "常见目录：/etc 放配置，/var/log 放日志，/var/lib 放服务状态，/var/cache 放缓存，/run 放重启即消失的运行时 socket/PID。",
+              "/proc 和 /sys 不在真实磁盘上，是 kernel 暴露出来的状态视图；/tmp 和 /run 常常是 tmpfs，快但重启丢失并占内存。",
+              "Docker/Kubernetes volume 很多本质是 bind mount；容器 rootfs 通常是 overlay：只读镜像层加一个可写上层。",
+              "不同进程可能在不同 mount namespace 里，所以同一个 /etc/hosts、/var/cache/app 对不同进程可能不是同一个东西。",
+              "排查顺序：findmnt /path、df -h /path、df -i /path、cat /proc/<pid>/mountinfo、ls -l /proc/<pid>/ns/mnt。"
+            ]
           }
         ]
       },
