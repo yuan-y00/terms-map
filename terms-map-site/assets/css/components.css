@@ -1780,6 +1780,20 @@ mark, .search-result-title mark, .search-result-snippet mark {
   margin: 1em 0 0.5em;
 }
 
+.home-resource-section {
+  margin: 2.2em 0 2.6em;
+}
+
+.home-resource-section-title {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--color-accent);
+  margin: 0 0 0.55em;
+}
+
 /* ── Video Grid ── */
 .home-video-grid {
   display: grid;

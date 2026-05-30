@@ -180,11 +180,7 @@ const App = (() => {
 
     /* ===== Resources ===== */
     if (state.resourcesData) {
-      h += ResourceCards.renderResourcePage(state.resourcesData, {
-        lang: state.lang,
-        filters: {},
-        embedded: true
-      });
+      h += ResourceCards.renderHomeResourceSections(state.resourcesData, state.lang);
     }
 
     h += '</div>'; /* /.home-page */

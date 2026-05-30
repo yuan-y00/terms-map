@@ -394,10 +394,11 @@ var ResourceCards = (function () {
       /* Group by audience_level */
       var groups = groupByAudience(filtered);
 
-      for (var gi = 0; gi < AUDIENCE_ORDER.length; gi++) {
-        var groupKey = AUDIENCE_ORDER[gi];
+      var renderedGroups = {};
+      function renderGroup(groupKey) {
         var groupItems = groups[groupKey];
-        if (!groupItems || groupItems.length === 0) continue;
+        if (!groupItems || groupItems.length === 0) return;
+        renderedGroups[groupKey] = true;
 
         h += '<section class="resource-group">';
         h += '<h2 class="resource-group-title">' + esc(groupKey) + '</h2>';
@@ -407,6 +408,17 @@ var ResourceCards = (function () {
           h += renderResourceCard(groupItems[ri], lang);
         }
         h += '</div></section>';
+      }
+
+      for (var gi = 0; gi < AUDIENCE_ORDER.length; gi++) {
+        renderGroup(AUDIENCE_ORDER[gi]);
+      }
+
+      var extraGroups = Object.keys(groups).filter(function (groupKey) {
+        return !renderedGroups[groupKey];
+      }).sort();
+      for (var eg = 0; eg < extraGroups.length; eg++) {
+        renderGroup(extraGroups[eg]);
       }
     }
 
@@ -620,6 +632,46 @@ var ResourceCards = (function () {
       h += renderHomeVideoCard(videos[i], lang);
     }
     h += '</div></section>';
+    return h;
+  }
+
+  function renderHomeResourceSections(data, lang) {
+    var items = normalizeResources(data).filter(function (item) {
+      return item.scope === "engineering-terms" && item.home_featured;
+    });
+    items.sort(function (a, b) { return a.priority - b.priority; });
+
+    var sections = [
+      {
+        title: lang === "en" ? "Industry Directions" : "产业方向",
+        tracks: ["automation", "semiconductor-equipment", "robotics", "energy", "manufacturing"]
+      },
+      {
+        title: lang === "en" ? "Engineering Skills" : "工程技能",
+        tracks: ["cpp", "python", "linux", "git", "plc", "microcontrollers", "sensors"]
+      },
+      {
+        title: lang === "en" ? "Foundations" : "学科基础",
+        tracks: ["math", "physics", "circuits", "programming", "control", "measurement"]
+      }
+    ];
+
+    var h = "";
+    for (var si = 0; si < sections.length; si++) {
+      var section = sections[si];
+      var sectionItems = items.filter(function (item) {
+        return section.tracks.indexOf(item.track) !== -1;
+      });
+      if (sectionItems.length === 0) continue;
+
+      h += '<section class="home-section home-resource-section">';
+      h += '<h2 class="home-resource-section-title">' + esc(section.title) + '</h2>';
+      h += '<div class="home-video-grid">';
+      for (var i = 0; i < sectionItems.length; i++) {
+        h += renderHomeVideoCard(sectionItems[i], lang);
+      }
+      h += '</div></section>';
+    }
     return h;
   }
 
@@ -842,6 +894,7 @@ var ResourceCards = (function () {
     renderResourceHighlights: renderResourceHighlights,
     renderRelatedResources: renderRelatedResources,
     renderHomeVideoGrid: renderHomeVideoGrid,
+    renderHomeResourceSections: renderHomeResourceSections,
     renderHomeTimeline: renderHomeTimeline,
     renderHomePeopleOrgWork: renderHomePeopleOrgWork,
     renderTimelineTable: renderTimelineTable,
