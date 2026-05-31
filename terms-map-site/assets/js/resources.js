@@ -657,7 +657,10 @@ var ResourceCards = (function () {
       },
       {
         title: lang === "en" ? "Engineering Skills" : "工程技能",
-        tracks: ["cpp", "python", "linux", "git", "plc", "microcontrollers", "sensors"]
+        tracks: ["cpp", "python", "linux", "git", "plc", "microcontrollers", "sensors"],
+        note: lang === "en"
+          ? "Difficulty: ★ 0-1y · ★★ 1-3y · ★★★ 3-5y · ★★★★ 5y+ · ★★★★★ expert"
+          : "难度：★ 0-1 年 · ★★ 1-3 年 · ★★★ 3-5 年 · ★★★★ 5 年+ · ★★★★★ 专家级"
       },
       {
         title: lang === "en" ? "Foundations" : "学科基础",
@@ -675,6 +678,9 @@ var ResourceCards = (function () {
 
       h += '<section class="home-section home-resource-section">';
       h += '<h2 class="home-resource-section-title">' + esc(section.title) + '</h2>';
+      if (section.note) {
+        h += '<p class="home-resource-section-note">' + esc(section.note) + '</p>';
+      }
       h += '<div class="home-video-grid">';
       for (var i = 0; i < sectionItems.length; i++) {
         h += renderHomeVideoCard(sectionItems[i], lang);
