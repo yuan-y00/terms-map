@@ -86,6 +86,7 @@ var ResourceCards = (function () {
       lang: lang,
       level: item.level || "beginner",
       audience_level: item.audience_level || "",
+      career_stage: item.career_stage || "",
       track: item.track || "",
       category: item.category || item.track || "",
       scope: item.scope || "",
@@ -341,6 +342,9 @@ var ResourceCards = (function () {
     h += '<span class="resource-badge resource-badge-level">' + esc(levelLabel(item.level)) + '</span>';
     if (item.lang && item.lang.length > 0) {
       h += '<span class="resource-badge resource-badge-lang">' + esc(item.lang.join("/").toUpperCase()) + '</span>';
+    }
+    if (item.career_stage) {
+      h += '<span class="resource-badge resource-badge-career">' + esc(item.career_stage) + '</span>';
     }
     h += '</div>';
 
@@ -688,6 +692,9 @@ var ResourceCards = (function () {
     h += '<h3 class="home-card-title">' + esc(localized(item.title, lang)) + '</h3>';
     if (item.source) {
       h += '<span class="home-card-source">' + esc(item.source) + '</span>';
+    }
+    if (item.career_stage) {
+      h += '<div class="home-card-career-stage">' + esc(item.career_stage) + '</div>';
     }
     var sum = localized(item.summary, lang);
     if (sum) {
