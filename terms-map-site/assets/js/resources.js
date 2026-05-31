@@ -659,8 +659,8 @@ var ResourceCards = (function () {
         title: lang === "en" ? "Engineering Skills" : "工程技能",
         tracks: ["cpp", "python", "linux", "git", "plc", "microcontrollers", "sensors"],
         note: lang === "en"
-          ? "Difficulty: ★ 0-1y · ★★ 1-3y · ★★★ 3-5y · ★★★★ 5y+ · ★★★★★ expert"
-          : "难度：★ 0-1 年 · ★★ 1-3 年 · ★★★ 3-5 年 · ★★★★ 5 年+ · ★★★★★ 专家级"
+          ? "Difficulty: 1 dot 0-1y · 2 dots 1-3y · 3 dots 3-5y · 4 dots 5y+ · 5 dots expert"
+          : "难度：1 点 0-1 年 · 2 点 1-3 年 · 3 点 3-5 年 · 4 点 5 年+ · 5 点 专家级"
       },
       {
         title: lang === "en" ? "Foundations" : "学科基础",

@@ -1860,15 +1860,16 @@ mark, .search-result-title mark, .search-result-snippet mark {
 
 .home-card-career-stage {
   align-self: flex-start;
-  margin: 0.55em 0 0;
+  margin: 0.5em 0 0;
   padding: 0;
   border-radius: 0;
   background: transparent;
   color: var(--color-primary);
   border: 0;
-  font-size: 14px;
-  font-weight: 800;
+  font-size: 13px;
+  font-weight: 700;
   line-height: 1.2;
+  letter-spacing: 1px !important;
 }
 
 .home-card-summary {
@@ -2496,6 +2497,7 @@ mark, .search-result-title mark, .search-result-snippet mark {
   border-color: transparent;
   padding-left: 0;
   padding-right: 0;
+  letter-spacing: 1px !important;
 }
 
 .resource-tag {
